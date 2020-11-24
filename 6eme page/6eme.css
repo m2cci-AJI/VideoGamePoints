@@ -1,0 +1,76 @@
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h2{
+    font-weight: bold
+}
+h1{
+    font-weight: bold;
+    text-shadow: 0px 0px 10px white;
+}
+
+.barre-noir {
+    width: 100%;
+    background-color: black;
+}
+
+.confirmation {
+    animation: opacity 20s linear;
+}
+
+.confirmation button {
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    color: white;
+    background-color: rgb(65, 65, 65);
+}
+
+a {
+    color: white !important;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.bottom {
+    height: 50px;
+}
+
+.loading {
+    height: 20px;
+    width: 100%;
+    background: linear-gradient( #9c1cf1, #5100e9);
+    box-shadow: 0px 0px 20px #9c1cf1;
+    animation: load 20s linear;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        visibility: hidden;
+    }
+
+    99.99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: initial;
+    }
+}

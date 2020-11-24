@@ -1,0 +1,387 @@
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    -webkit-outline: none;
+    -moz-outline: none;
+    -ms-outline: none;
+    -o-outline: none;
+}
+
+/*--INSCRIPTIONPWD--*/
+
+
+.invalidorvalid{
+    box-shadow: 0 0 5px 1px red;
+}
+
+.invalidorvalid:valid {
+    box-shadow: 0 0 5px 1px green;
+}
+
+/*--INSCRIPTIONPWD end--*/
+
+
+body {
+    background-color: #04011d;
+}
+
+
+h2{
+    font-weight: bold
+}
+
+#deco {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#deco::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%) scaleX(0);
+          transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+#deco:hover::after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
+}
+
+
+
+/*--SECTION 1 - JUMBOTRON--*/
+
+#welcome{
+    font-weight: bold;
+    padding-top: 0px;
+    font-size: 70px;
+    text-shadow: 0px 0px 20px #fff;
+}
+
+.sec1 .jumbotron {
+    background-image: url(image-page-1/AurelionSol3.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    
+}/*height100p*/
+.sec1 .jumbotron{
+    height: 100vh !important;
+}
+
+@media (max-width: 1000px){
+    .sec1 .jumbotron .container {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 770px){
+    .sec1 .jumbotron{
+        height: 150vh !important;
+    }
+}
+@media (max-width: 320px){
+    .sec1 .jumbotron{
+        height: 200vh !important;
+    }
+}
+
+
+
+.sec1 .jumbotron .badge {
+    white-space: normal;
+}
+
+.sec1 .jumbotron p {
+    max-width: 275px;
+    font-size: 1.3em;
+}
+
+/*--FIN SECTION 1 - JUMBOTRON--*/
+
+/*--SECTION 2 - LOGO--*/
+
+.sec2{
+    box-shadow: 0px -10px 10px #04011d;
+}
+
+.sec2 .jumbotron {
+    background: linear-gradient( transparent 5%, #04011d);
+}
+
+.sec2 .logo {
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    padding: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 350px;
+    height: 350px;
+}
+
+
+/*--FIN SECTION 2 - LOGO--*/
+
+/*--SECTION 3 - YTB--*/
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+       height: 700px;
+    }
+ }
+ 
+ .contentcardd {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 4%;
+    padding-top: 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ @media screen and (max-width: 767px) {
+    .contentcardd {
+       padding-top: 30px;
+       flex-direction: column;
+    }
+ }
+ 
+ .card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+    height: 250px;
+    background-color: #070429;
+    ;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 16px;   
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+
+ .icon {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    max-width:80px;
+    background: linear-gradient(120deg, #8e2de2 0%, #4a00e0 40%, rgba(0, 0, 0, 0.28) 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+ }
+ 
+ .material-icons.md-18 { font-size: 18px; }
+ .material-icons.md-24 { font-size: 24px; }
+ .material-icons.md-36 { font-size: 36px; }
+ .material-icons.md-48 { font-size: 48px; }
+ 
+ .card .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+ }
+ 
+ .card .text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 2px;
+    opacity: 0;
+    max-height:0;
+    transition: all 0.3s ease;
+ }
+ 
+ .card:hover {
+    height: 270px;
+ }
+ 
+ .card:hover .info {
+    height: 90%;
+ }
+ 
+ .card:hover .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height:40px;
+ }
+ 
+ .card:hover .icon {
+    background-position: -120px;
+    transition: all 0.3s ease;
+ }
+ 
+ .card:hover .icon i {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: all 0.3s ease;
+ }
+
+#ytb{
+    border: 15px solid #04011d;
+    border-radius: 15px;
+    box-shadow: -10px 10px 15px black;
+    border-top-right-radius: 0px;
+}
+
+
+#text-page-FAQ{
+    text-align: right;
+    color: white;
+    text-decoration: underline;
+}
+
+/*--FIN SECTION 3 - YTB--*/
+
+/*--SECTION 4 - FAQ--*/
+
+.sec4 .box {
+    background-color: #131313;
+    border-radius: 10px;
+}
+
+/*--FIN SECTION 4 - FAQ--*/
+
+#elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#elements .first_element, #elements .second_element, #elements .third_element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 767px) { 
+
+    #elements > #arrow1 {
+        background-image: url("image-page-1/arrow-right-solid.png");
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center;
+    }
+
+    #elements > #arrow2 {
+        background-image: url("image-page-1/arrow-left-solid.png");
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center;
+    }
+
+}
+
+@media screen and (max-width: 767px) { 
+    #elements {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #elements > #arrow1 {
+        background-image: url("image-page-1/arrow-down-solid.png");
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center;
+    }
+
+    #elements > #arrow2 {
+        background-image: url("image-page-1/arrow-up-solid.png");
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center;
+    }
+
+}

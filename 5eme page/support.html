@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../header-footer/header.css">
+    <link rel="stylesheet" href="../header-footer/footer.css">
+    <link rel="stylesheet" href="support.css">
+    <script> 
+        $(function(){
+          $("#header").load("../header-footer/header.html"); 
+          $("#footer").load("../header-footer/footer.html"); 
+        });
+    </script>
+</head>
+<body>
+    <header id = "header"> </header>
+    <script id="rendered-js" >
+        function createRipple(event) {
+          const button = event.currentTarget;
+        
+          const circle = document.createElement("span");
+          const diameter = Math.max(button.clientWidth, button.clientHeight);
+          const radius = diameter / 2;
+        
+          circle.style.width = circle.style.height = `${diameter}px`;
+          circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+          circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+          circle.classList.add("ripple");
+        
+          const ripple = button.getElementsByClassName("ripple")[0];
+        
+          if (ripple) {
+            ripple.remove();
+          }
+        
+          button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByTagName("button");
+        for (const button of buttons) {
+          button.addEventListener("click", createRipple);
+        }
+    </script>
+
+    <section class="sec1">
+        <div class="title text-white text-center my-5">
+            <h1>SUPPORT</h1><br>
+            <div class="buttonserver">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <defs>
+                    <symbol id="arrow" viewBox="0 0 100 100">
+                        <path d="M12.5 45.83h64.58v8.33H12.5z"/>
+                            <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z"/>
+                    </symbol>
+                </defs>
+                </svg>
+                  
+                <div class="content">
+                      
+                    <a href="../7eme page/etatserveur.html" class="button">
+                        États serveur
+                        <span>
+                            <svg>
+                                <use xlink:href="#arrow" href="#arrow"></use>
+                            </svg>
+                        </span>
+                    </a>
+            </div>
+                      
+            </div>
+            <h2 class="mt-5">ENVOYER UNE REQUÊTE</h2>
+            <p class="mx-auto">Envoyez une requête si vous avez un problème, une question ou une demande de partenaria.<br>Nous vous reponderons rapidement.</p>
+        </div>
+        <div class="title text-white text-right my-5"></div>
+            <div class="d-flex flex-column align-items-center mx-auto" style="max-width: 1920px;">
+                <div class="col-md-5 col-11 my-5">
+                    <label for="exampleFormControlSelect1" class="text-white">CHOISISSEZ UN TYPE DE REQUÊTE</label>
+                    <div class="list-group" id="myList" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="choix-1-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">1 - Question général sur Aaaaaaa</a>
+                    <a class="list-group-item list-group-item-action " id="choix-2-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">2 - Récupérer mon compte</a>
+                    <a class="list-group-item list-group-item-action" id="choix-3-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">3 - J'ai un probleme concernant mes point</a>
+                    <a class="list-group-item list-group-item-action" id="choix-4-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">4 - J'ai un probleme concernant l'achat de skin</a>
+                    <a class="list-group-item list-group-item-action" id="choix-5-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">5 - J'aimerais faire un partenariat</a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-11 mt-5">
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="choix-1" role="tabpanel" aria-labelledby="list-home-list">
+                            <form>
+                                <div class="form-group text-white">
+                                <label for="formGroupExampleInput">Sujet</label>
+                                <input type="text" class="form-control" id="sujet-form" placeholder="À quel propos ?">
+                                </div>
+                                <div class="form-group text-white">
+                                    <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                            </form>
+                            <a href="../8eme page/mercidevotreenvoie.html">
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </a>
+                        </div>
+
+                        <div class="tab-pane fade" id="choix-2" role="tabpanel" aria-labelledby="list-profile-list">
+                            <form>
+
+                                <div class="form-group text-white">
+                                  <input type="email" class="form-control" id="email-form" aria-describedby="emailHelp" placeholder="Adresse e-mail">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-12 my-2">
+                                        <input type="text" class="form-control" placeholder="Pseudo niksoud">
+                                    </div>
+                                    <div class="col-md-6 col-12 my-2">
+                                        <input type="text" class="form-control" placeholder="pseudo LOL">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-12 my-2">
+                                        <input type="text" class="form-control" placeholder="ID Riot Games">
+                                    </div>
+                                    <div class="col-md-6 col-12 my-2">
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Pays & Langue</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AX">Åland Islands</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                            <option value="AR">Argentina</option>
+                                            <option value="AM">Armenia</option>
+                                            <option value="AW">Aruba</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="AT">Austria</option>
+                                            <option value="AZ">Azerbaijan</option>
+                                            <option value="BS">Bahamas</option>
+                                            <option value="BH">Bahrain</option>
+                                            <option value="BD">Bangladesh</option>
+                                            <option value="BB">Barbados</option>
+                                            <option value="BY">Belarus</option>
+                                            <option value="BE">Belgium</option>
+                                            <option value="BZ">Belize</option>
+                                            <option value="BJ">Benin</option>
+                                            <option value="BM">Bermuda</option>
+                                            <option value="BT">Bhutan</option>
+                                            <option value="BO">Bolivia, Plurinational State of</option>
+                                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                            <option value="BA">Bosnia and Herzegovina</option>
+                                            <option value="BW">Botswana</option>
+                                            <option value="BR">Brazil</option>
+                                            <option value="IO">British Indian Ocean Territory</option>
+                                            <option value="BN">Brunei Darussalam</option>
+                                            <option value="BG">Bulgaria</option>
+                                            <option value="BF">Burkina Faso</option>
+                                            <option value="BI">Burundi</option>
+                                            <option value="KH">Cambodia</option>
+                                            <option value="CM">Cameroon</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="CV">Cape Verde</option>
+                                            <option value="KY">Cayman Islands</option>
+                                            <option value="CF">Central African Republic</option>
+                                            <option value="TD">Chad</option>
+                                            <option value="CL">Chile</option>
+                                            <option value="CN">China</option>
+                                            <option value="CX">Christmas Island</option>
+                                            <option value="CC">Cocos (Keeling) Islands</option>
+                                            <option value="CO">Colombia</option>
+                                            <option value="KM">Comoros</option>
+                                            <option value="CG">Congo</option>
+                                            <option value="CD">Congo, The Democratic Republic of the</option>
+                                            <option value="CK">Cook Islands</option>
+                                            <option value="CR">Costa Rica</option>
+                                            <option value="CI">Côte d'Ivoire</option>
+                                            <option value="HR">Croatia</option>
+                                            <option value="CU">Cuba</option>
+                                            <option value="CW">Curaçao</option>
+                                            <option value="CY">Cyprus</option>
+                                            <option value="CZ">Czech Republic</option>
+                                            <option value="DK">Denmark</option>
+                                            <option value="DJ">Djibouti</option>
+                                            <option value="DM">Dominica</option>
+                                            <option value="DO">Dominican Republic</option>
+                                            <option value="EC">Ecuador</option>
+                                            <option value="EG">Egypt</option>
+                                            <option value="SV">El Salvador</option>
+                                            <option value="GQ">Equatorial Guinea</option>
+                                            <option value="ER">Eritrea</option>
+                                            <option value="EE">Estonia</option>
+                                            <option value="ET">Ethiopia</option>
+                                            <option value="FK">Falkland Islands (Malvinas)</option>
+                                            <option value="FO">Faroe Islands</option>
+                                            <option value="FJ">Fiji</option>
+                                            <option value="FI">Finland</option>
+                                            <option value="FR">France</option>
+                                            <option value="GF">French Guiana</option>
+                                            <option value="PF">French Polynesia</option>
+                                            <option value="GA">Gabon</option>
+                                            <option value="GM">Gambia</option>
+                                            <option value="GE">Georgia</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="GH">Ghana</option>
+                                            <option value="GI">Gibraltar</option>
+                                            <option value="GR">Greece</option>
+                                            <option value="GL">Greenland</option>
+                                            <option value="GD">Grenada</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GU">Guam</option>
+                                            <option value="GT">Guatemala</option>
+                                            <option value="GG">Guernsey</option>
+                                            <option value="GN">Guinea</option>
+                                            <option value="GW">Guinea-Bissau</option>
+                                            <option value="GY">Guyana</option>
+                                            <option value="HT">Haiti</option>
+                                            <option value="VA">Holy See (Vatican City State)</option>
+                                            <option value="HN">Honduras</option>
+                                            <option value="HK">Hong Kong</option>
+                                            <option value="HU">Hungary</option>
+                                            <option value="IS">Iceland</option>
+                                            <option value="IN">India</option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="IR">Iran, Islamic Republic of</option>
+                                            <option value="IQ">Iraq</option>
+                                            <option value="IE">Ireland</option>
+                                            <option value="IM">Isle of Man</option>
+                                            <option value="IL">Israel</option>
+                                            <option value="IT">Italy</option>
+                                            <option value="JM">Jamaica</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="JE">Jersey</option>
+                                            <option value="JO">Jordan</option>
+                                            <option value="KZ">Kazakhstan</option>
+                                            <option value="KE">Kenya</option>
+                                            <option value="KI">Kiribati</option>
+                                            <option value="KP">Korea, Democratic People's Republic of</option>
+                                            <option value="KR">Korea, Republic of</option>
+                                            <option value="KW">Kuwait</option>
+                                            <option value="KG">Kyrgyzstan</option>
+                                            <option value="LA">Lao People's Democratic Republic</option>
+                                            <option value="LV">Latvia</option>
+                                            <option value="LB">Lebanon</option>
+                                            <option value="LS">Lesotho</option>
+                                            <option value="LR">Liberia</option>
+                                            <option value="LY">Libya</option>
+                                            <option value="LI">Liechtenstein</option>
+                                            <option value="LT">Lithuania</option>
+                                            <option value="LU">Luxembourg</option>
+                                            <option value="MO">Macao</option>
+                                            <option value="MK">Macedonia, Republic of</option>
+                                            <option value="MG">Madagascar</option>
+                                            <option value="MW">Malawi</option>
+                                            <option value="MY">Malaysia</option>
+                                            <option value="MV">Maldives</option>
+                                            <option value="ML">Mali</option>
+                                            <option value="MT">Malta</option>
+                                            <option value="MH">Marshall Islands</option>
+                                            <option value="MQ">Martinique</option>
+                                            <option value="MR">Mauritania</option>
+                                            <option value="MU">Mauritius</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="MX">Mexico</option>
+                                            <option value="FM">Micronesia, Federated States of</option>
+                                            <option value="MD">Moldova, Republic of</option>
+                                            <option value="MC">Monaco</option>
+                                            <option value="MN">Mongolia</option>
+                                            <option value="ME">Montenegro</option>
+                                            <option value="MS">Montserrat</option>
+                                            <option value="MA">Morocco</option>
+                                            <option value="MZ">Mozambique</option>
+                                            <option value="MM">Myanmar</option>
+                                            <option value="NA">Namibia</option>
+                                            <option value="NR">Nauru</option>
+                                            <option value="NP">Nepal</option>
+                                            <option value="NL">Netherlands</option>
+                                            <option value="NC">New Caledonia</option>
+                                            <option value="NZ">New Zealand</option>
+                                            <option value="NI">Nicaragua</option>
+                                            <option value="NE">Niger</option>
+                                            <option value="NG">Nigeria</option>
+                                            <option value="NU">Niue</option>
+                                            <option value="NF">Norfolk Island</option>
+                                            <option value="MP">Northern Mariana Islands</option>
+                                            <option value="NO">Norway</option>
+                                            <option value="OM">Oman</option>
+                                            <option value="PK">Pakistan</option>
+                                            <option value="PW">Palau</option>
+                                            <option value="PS">Palestine, State of</option>
+                                            <option value="PA">Panama</option>
+                                            <option value="PG">Papua New Guinea</option>
+                                            <option value="PY">Paraguay</option>
+                                            <option value="PE">Peru</option>
+                                            <option value="PH">Philippines</option>
+                                            <option value="PN">Pitcairn</option>
+                                            <option value="PL">Poland</option>
+                                            <option value="PT">Portugal</option>
+                                            <option value="PR">Puerto Rico</option>
+                                            <option value="QA">Qatar</option>
+                                            <option value="RE">Réunion</option>
+                                            <option value="RO">Romania</option>
+                                            <option value="RU">Russian Federation</option>
+                                            <option value="RW">Rwanda</option>
+                                            <option value="BL">Saint Barthélemy</option>
+                                            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                            <option value="KN">Saint Kitts and Nevis</option>
+                                            <option value="LC">Saint Lucia</option>
+                                            <option value="MF">Saint Martin (French part)</option>
+                                            <option value="PM">Saint Pierre and Miquelon</option>
+                                            <option value="VC">Saint Vincent and the Grenadines</option>
+                                            <option value="WS">Samoa</option>
+                                            <option value="SM">San Marino</option>
+                                            <option value="ST">Sao Tome and Principe</option>
+                                            <option value="SA">Saudi Arabia</option>
+                                            <option value="SN">Senegal</option>
+                                            <option value="RS">Serbia</option>
+                                            <option value="SC">Seychelles</option>
+                                            <option value="SL">Sierra Leone</option>
+                                            <option value="SG">Singapore</option>
+                                            <option value="SX">Sint Maarten (Dutch part)</option>
+                                            <option value="SK">Slovakia</option>
+                                            <option value="SI">Slovenia</option>
+                                            <option value="SB">Solomon Islands</option>
+                                            <option value="SO">Somalia</option>
+                                            <option value="ZA">South Africa</option>
+                                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                            <option value="SS">South Sudan</option>
+                                            <option value="ES">Spain</option>
+                                            <option value="LK">Sri Lanka</option>
+                                            <option value="SD">Sudan</option>
+                                            <option value="SR">Suriname</option>
+                                            <option value="SJ">Svalbard and Jan Mayen</option>
+                                            <option value="SZ">Swaziland</option>
+                                            <option value="SE">Sweden</option>
+                                            <option value="CH">Switzerland</option>
+                                            <option value="SY">Syrian Arab Republic</option>
+                                            <option value="TW">Taiwan</option>
+                                            <option value="TJ">Tajikistan</option>
+                                            <option value="TZ">Tanzania, United Republic of</option>
+                                            <option value="TH">Thailand</option>
+                                            <option value="TL">Timor-Leste</option>
+                                            <option value="TG">Togo</option>
+                                            <option value="TK">Tokelau</option>
+                                            <option value="TO">Tonga</option>
+                                            <option value="TT">Trinidad and Tobago</option>
+                                            <option value="TN">Tunisia</option>
+                                            <option value="TR">Turkey</option>
+                                            <option value="TM">Turkmenistan</option>
+                                            <option value="TC">Turks and Caicos Islands</option>
+                                            <option value="TV">Tuvalu</option>
+                                            <option value="UG">Uganda</option>
+                                            <option value="UA">Ukraine</option>
+                                            <option value="AE">United Arab Emirates</option>
+                                            <option value="GB">United Kingdom</option>
+                                            <option value="UM">United States Minor Outlying Islands</option>
+                                            <option value="US">United States</option>
+                                            <option value="UY">Uruguay</option>
+                                            <option value="UZ">Uzbekistan</option>
+                                            <option value="VU">Vanuatu</option>
+                                            <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                            <option value="VN">Viet Nam</option>
+                                            <option value="VG">Virgin Islands, British</option>
+                                            <option value="VI">Virgin Islands, U.S.</option>
+                                            <option value="WF">Wallis and Futuna</option>
+                                            <option value="EH">Western Sahara</option>
+                                            <option value="YE">Yemen</option>
+                                            <option value="ZM">Zambia</option>
+                                            <option value="ZW">Zimbabwe</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+
+                                <div class="my-2 oui-non">
+                                    <label for="validationServer01" class="text-white">Souvenez-vous des informations d'inscription de votre compte ?</label>
+                                    <br>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="oui-form" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label text-white" for="oui-form">Oui</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="non-form" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label text-white" for="non-form">Non</label>
+                                    </div>
+                                    <div class="tab-pane fade display-none mt-2" id="choix-2-bis" role="tabpanel" aria-labelledby="list-messages-list">
+                                        <div class="form-group text-white">
+                                            <label for="email-form-2">Adresse e-mail utilisée lors de la création du compte</label>
+                                            <input type="email" class="form-control" id="email-form-2" aria-describedby="emailHelp">
+                                        </div>
+                                        <label for="validationServer01" class="text-white">Avez-vous toujours accès à l'e-mail utilisé lors de votre inscription ?</label>
+                                        <br>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="oui-form-2" name="customRadioInline2" class="custom-control-input">
+                                            <label class="custom-control-label text-white" for="oui-form-2">Oui</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="non-form-2" name="customRadioInline2" class="custom-control-input">
+                                            <label class="custom-control-label text-white" for="non-form-2">Non</label>
+                                        </div>
+                                        <div class="row my-2">
+                                            <div class="col-md-6 col-12 my-2">
+                                                <input type="text" class="form-control" placeholder="Date création compte">
+                                            </div><div class="col-md-6 col-12 my-2">
+                                                <input type="text" class="form-control" placeholder="Lieu d'enregistrement du compte">
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div> 
+                               
+                                <div class="oui-non">
+                                    <label for="validationServer01" class="text-white">Souvenez-vous de combien vous aviez de NP et si vous en avez acheté ?</label>
+                                    <br>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="oui-form-3" name="customRadioInline3" class="custom-control-input">
+                                        <label class="custom-control-label text-white" for="oui-form-3">Oui</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="non-form-3" name="customRadioInline3" class="custom-control-input">
+                                        <label class="custom-control-label text-white" for="non-form-3">Non</label>
+                                    </div>
+                                    <div class="tab-pane fade display-none mt-2" id="choix-2-bis-bis" role="tabpanel" aria-labelledby="list-messages-list">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12 my-2">
+                                                <input type="text" class="form-control" placeholder="Environ combien ?">
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-12 my-3">
+                                        <input type="text" class="form-control" placeholder="Sujet de la demande">
+                                    </div>
+                                    <div class="col-md-6 col-12 my-3">
+                                        <input type="text" class="form-control" placeholder="Personne ayant accédé au compte">
+                                    </div>
+                                    <div class="col-12 form-group text-white">
+                                        <label for="exampleFormControlTextarea1">Description</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    </div>
+                                </div> 
+
+                                <br>
+                                
+                            </form>
+                            <a href="../8eme page/mercidevotreenvoie.html">
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </a>
+                        </div>
+
+                        <div class="tab-pane fade" id="choix-3" role="tabpanel" aria-labelledby="list-messages-list">
+                            <div class="row">
+                                <div class="col-md-6 col-12 my-3">
+                                    <input type="text" class="form-control" placeholder="Sujet de la demande">
+                                </div>
+                                <div class="col-12 form-group text-white">
+                                    <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="oui-non">
+                                <label for="validationServer01" class="text-white">Aviez-vous acheté des NP ?</label>
+                                <br>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="oui-form-4" name="customRadioInline4" class="custom-control-input">
+                                    <label class="custom-control-label text-white" for="oui-form-4">Oui</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="non-form-4" name="customRadioInline4" class="custom-control-input">
+                                    <label class="custom-control-label text-white" for="non-form-4">Non</label>
+                                </div>
+                                <div class="tab-pane fade display-none mt-2" id="choix-3-bis" role="tabpanel" aria-labelledby="list-messages-list">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12 my-2">
+                                            <input type="text" class="form-control" placeholder="Combien ? 100/200/500/1000">
+                                        </div>
+                                    </div>                                        
+                                </div>
+                            </div>
+                            <br>
+                            <a href="../8eme page/mercidevotreenvoie.html">
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </a>
+                        </div>
+
+                        <div class="tab-pane fade" id="choix-4" role="tabpanel" aria-labelledby="list-settings-list">
+                            <div class="row">
+                                <div class="col-md-6 col-12 my-3">
+                                    <input type="text" class="form-control" placeholder="Sujet de la demande">
+                                </div>
+                                <div class="col-12 form-group text-white">
+                                    <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="oui-non">
+                                <label for="validationServer01" class="text-white">Avez-vous acheté un skin et vous ne l'avez pas reçu sous 24h ?</label>
+                                <br>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="oui-form-5" name="customRadioInline5" class="custom-control-input">
+                                    <label class="custom-control-label text-white" for="oui-form-5">Oui</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="non-form-5" name="customRadioInline5" class="custom-control-input">
+                                    <label class="custom-control-label text-white" for="non-form-5">Non</label>
+                                </div>
+                                <div class="tab-pane fade display-none mt-2" id="choix-4-bis" role="tabpanel" aria-labelledby="list-messages-list">
+                                    <div class="row">
+                                        <div class="col-12 form-group text-white">
+                                            <label for="exampleFormControlTextarea1">Quel skin ou paysafecard avez vous acheté ?</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                        </div>
+                                    </div>                                        
+                                </div>
+                            </div>
+                            <br>
+                            <a href="../8eme page/mercidevotreenvoie.html">
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </a>
+                        </div>
+
+                        <div class="tab-pane fade" id="choix-5" role="tabpanel" aria-labelledby="list-settings-list">
+                            <form class="text-white">
+                                <div class="form-group text-white">
+                                    <label for="formGroupExampleInput">Sujet</label>
+                                    <input type="text" class="form-control" id="sujet-form">
+                                </div>
+                                <div class="form-group text-white">
+                                    <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                                <div class="my-3">
+                                    <label for="formGroupExampleInput">Sur quelle plateforme ?</label>
+                                    <input type="text" class="form-control" id="sujet-form">
+                                    <label for="formGroupExampleInput" class="my-2">Lien de votre chaine</label>
+                                    <input type="text" class="form-control" id="sujet-form">
+                                </div>
+                            </form>
+                            <a href="../8eme page/mercidevotreenvoie.html">
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer id = "footer" class="mt-5"> </footer>
+    
+    <script>
+        $('#choix-1-list').on('click', function (e) {
+            e.preventDefault()
+            $('#choix-1-list').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+            $('#choix-1').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+        })
+
+        $('#choix-2-list').on('click', function (e) {
+            e.preventDefault()
+            $('#choix-2-list').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+            $('#choix-2').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+        })
+
+        $('#oui-form').on('click', function () {
+            $('#choix-2-bis').addClass('show').addClass('active').addClass('display');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#non-form').on('click', function () {
+            $('#choix-2-bis').removeClass('show').removeClass('active').removeClass('display').addClass('display-none');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#oui-form-3').on('click', function () {
+            $('#choix-2-bis-bis').addClass('show').addClass('active').addClass('display');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#non-form-3').on('click', function () {
+            $('#choix-2-bis-bis').removeClass('show').removeClass('active').removeClass('display').addClass('display-none');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#oui-form-4').on('click', function () {
+            $('#choix-3-bis').addClass('show').addClass('active').addClass('display');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#non-form-4').on('click', function () {
+            $('#choix-3-bis').removeClass('show').removeClass('active').removeClass('display').addClass('display-none');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#choix-3-list').on('click', function (e) {
+            e.preventDefault()
+            $('#choix-3-list').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+            $('#choix-3').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+        })
+
+        $('#choix-4-list').on('click', function (e) {
+            e.preventDefault()
+            $('#choix-4-list').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+            $('#choix-4').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+        })
+
+        $('#oui-form-5').on('click', function () {
+            $('#choix-4-bis').addClass('show').addClass('active').addClass('display');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#non-form-5').on('click', function () {
+            $('#choix-4-bis').removeClass('show').removeClass('active').removeClass('display').addClass('display-none');
+            $("input[type=checkbox]").attr("checked",!toggle);
+            toggle = !toggle;
+        })
+
+        $('#choix-5-list').on('click', function (e) {
+            e.preventDefault()
+            $('#choix-5-list').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+            $('#choix-5').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
+        })
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

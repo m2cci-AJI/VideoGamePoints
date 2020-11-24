@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../header-footer/header.css">
+    <link rel="stylesheet" href="../header-footer/footer.css">
+    <link rel="stylesheet" href="boutique.css">
+    <script>
+        $(function () {
+            $("#header").load("../header-footer/header.html");
+            $("#footer").load("../header-footer/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header id="header"> </header>
+    <script id="rendered-js">
+        function createRipple(event) {
+            const button = event.currentTarget;
+
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+
+            const ripple = button.getElementsByClassName("ripple")[0];
+
+            if (ripple) {
+                ripple.remove();
+            }
+
+            button.appendChild(circle);
+        }
+
+        const buttons = document.getElementsByTagName("button");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+    </script>
+
+    <section class="sec1 text-white mt-5">
+        <h1 class="text-center">C'est ici que vous gagnez vos NP</h1>
+        <div class="offres mt-5 text-center">
+            <button class="premium px-5 my-3 mx-3" data-toggle="modal" data-target="#premium-modal">
+                PREMIUM<br>2.99€ / Mois
+            </button>
+            <button class="buy-np px-5 my-3 mx-3" data-toggle="modal" data-target="#buy-modal">
+                ACHETER<br>DES NP
+            </button>
+        </div>
+
+        <!-- PREMIUM Modal -->
+        <div class="modal fade" id="premium-modal" tabindex="-1" aria-labelledby="premium-modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content mx-4">
+                    <div class="color-bar"></div>
+                    <div class="mx-4">
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <h1 class="text-white">BASIQUE</h1>
+                        </div>
+                    </div>
+                    <div class="divider mx-auto"></div>
+                    <div class="modal-body">
+                        <br>
+                        <h1 class="text-center" id="premiumbuycombien">2,99€/mois</h1><br>
+                        <h4> - 200 NP gratuit tous les mois</h4>
+                        <h4> - ** pubs tous les * heures</h4>
+                        <h4> - Reponce du support plus rapide</h4>
+                        <h4> - 2 semaine d'essais</h4><br>
+                        <div class="d-flex justify-content-center my-4">
+                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
+                                data-target="#paiement-modal"></i>Acheter</button>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="a-changer">
+                            <label class="form-check-label" for="a-changer">condition</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-content mx-4">
+                    <div class="color-bar"></div>
+                    <div class="mx-4">
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <h1 class="text-white">SUPER</h1>
+                        </div>
+                    </div>
+                    <div class="divider mx-auto"></div>
+                    <div class="modal-body">
+                        <br>
+                        <h1 class="text-center" id="premiumbuycombien">4,99€/mois</h1><br>
+                        <h4> - 400 NP gratuit tous les mois</h4>
+                        <h4> - ** pubs tous les * heures</h4>
+                        <h4> - Reponce du support plus rapide</h4>
+                        <h4> - 200 NP offert apres 6 mois</h4><br>
+                        <div class="d-flex justify-content-center my-4">
+                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
+                                data-target="#paiement-modal"></i>Acheter</button>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="a-changer">
+                            <label class="form-check-label" for="a-changer">Condition</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BUY Modal -->
+        <div class="modal fade" id="buy-modal" tabindex="-1" aria-labelledby="buy-modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered flex-wrap">
+                <div class="modal-content mx-4 text-center">
+                    <div class="color-bar"></div>
+                    <h1 class="text-white">** NP</h1>
+                    <div class="modal-body">
+                        <h1 class="text-center" id="premiumbuycombien">4,99€</h1><br>
+                        <div class="d-flex justify-content-center my-4">
+                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
+                                data-target="#paiement-modal"></i>Acheter</button>
+                        </div>
+                        <div class="form-group form-check text-left">
+                            <input type="checkbox" class="form-check-input" id="a-changer">
+                            <label class="form-check-label" for="a-changer">Condition</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-content mx-4 text-center">
+                    <div class="color-bar"></div>
+                    <h1 class="text-white">** NP</h1>
+                    <div class="modal-body">
+                        <h1 class="text-center" id="premiumbuycombien">4,99€</h1><br>
+                        <div class="d-flex justify-content-center my-4">
+                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
+                                data-target="#paiement-modal"></i>Acheter</button>
+                        </div>
+                        <div class="form-group form-check text-left">
+                            <input type="checkbox" class="form-check-input" id="a-changer">
+                            <label class="form-check-label" for="a-changer">Condition</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-content mx-4 text-center">
+                    <div class="color-bar"></div>
+                    <h1 class="text-white">** NP</h1>
+                    <div class="modal-body">
+                        <h1 class="text-center" id="premiumbuycombien">4,99€</h1><br>
+                        <div class="d-flex justify-content-center my-4">
+                            <button type="submit" class="btn w-50 text-white"></i>Acheter</button>
+                        </div>
+                        <div class="form-group form-check text-left">
+                            <input type="checkbox" class="form-check-input" id="a-changer">
+                            <label class="form-check-label" for="a-changer">Condition.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paiement Modal -->
+        <div class="modal fade" id="paiement-modal" tabindex="-1" aria-labelledby="paiement-modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" id="modalPaiement" style="max-width: 45%;">
+                <div class="modal-content" style="width: 100%">
+                    <div class="modal-header"></div>
+                    <h1 class="modal-title" id="premiumbuycombien">Paiement</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <hr>
+                    <div class="modal-body">
+                        <h4><i class="fas fa-search-dollar fa-lg"></i> Détails de paiement</h4>
+                        <br>
+                        <p> <i class="fas fa-info-circle"></i> Veuillez choisir le mode de paiement qui vous convient
+                            pour finaliser votre
+                            achat.</p>
+                        <form>
+                            <div class="form-group">
+                                <img src="./image-page-2/master_card.png" class="img-fluid"
+                                    style="height: 30px; margin-left:10px;" alt=""> &nbsp;
+                                <img src="./image-page-2/visa_card.png" class="img-fluid" style="height: 30px;" alt="">
+                                &nbsp;
+                                <img src="./image-page-2/diners_card.png" class="img-fluid" style="height: 50px;"
+                                    alt=""> &nbsp;
+                                <img src="./image-page-2/maestro_card.png" class="img-fluid" style="height: 40px;"
+                                    alt=""> &nbsp;
+                                <img src="./image-page-2/network_card.png" class="img-fluid" style="height: 50px;"
+                                    alt=""> &nbsp;
+                                <img src="./image-page-2/amex_card.png" class="img-fluid" style="height: 50px;" alt="">
+                                <div class="custom-control custom-checkbox custom-checkbox-green">
+                                    <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                        id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1"></label>
+                                </div>
+                                <div class="triangle" style="display: none"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <img src="./image-page-2/payPal_card.png" style="height: 40px; margin-left:10px;"
+                                    alt="">
+                                <div class="custom-control custom-checkbox custom-checkbox-green">
+                                    <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                        name="check" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2"></label>
+                                </div>
+                                <div class="triangle" style="display: none"></div>
+                            </div>
+                            <div class="form-group clicked_elem" style="display: none">
+                                <img src="./image-page-2/crypto_card.png" style="height: 40px; margin-left:10px;"
+                                    alt="">
+                                <div class="custom-control custom-checkbox custom-checkbox-green">
+                                    <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                        id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3" 2></label>
+                                </div>
+                                <div class="triangle" style="display: none"></div>
+                            </div>
+                            <div class="form-group clicked_elem" style="display: none">
+                                <img src="./image-page-2/googlePay_card.png" style="height: 40px; margin-left:10px;"
+                                    alt="">
+                                <div class="custom-control custom-checkbox custom-checkbox-green">
+                                    <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                        id="customCheck4">
+                                    <label class="custom-control-label" for="customCheck4"></label>
+                                </div>
+                                <div class="triangle" style="display: none"></div>
+                            </div>
+                            <div class="form-group clicked_elem" style="display: none">
+                                <img src="./image-page-2/amazon_card.png" style="height: 40px; margin-left:10px;"
+                                    alt="">
+                                <div class="custom-control custom-checkbox custom-checkbox-green">
+                                    <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                        id="customCheck5">
+                                    <label class="custom-control-label" for="customCheck5"></label>
+                                </div>
+                                <div class="triangle" style="display: none"></div>
+                            </div>
+
+                            <div id="button_plus">
+                                <h3>Plus ...</h3>
+                            </div>
+                            <br>
+                            <h6>Monnaie de paiement</h6>
+                            <select id="monnaies" name="monnaies">
+                                <option value="euro">Euro (€)</option>
+                                <option value="dollar">Dollar ($)</option>
+                            </select>
+                            <br>
+                            <br>
+                            <div id="confirm_input">
+                                <div class="custom-control custom-checkbox custom-checkbox-green">
+                                    <input type="checkbox" class="custom-control-input custom-control-input-black"
+                                        id="customCheck6">
+                                    <label class="custom-control-label" for="customCheck6"></label>
+                                </div>
+                                <p>Je confirme que toutes les informations saisies sont exactes et j'accepte <a
+                                        href="#">vos
+                                        conditions d'utilisation</a>.</p>
+                            </div>
+                            <br>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog paiement_Box" id="paiement_Box_card" style="max-width: 45%; display: none">
+                <div class="modal-content" style="width: 100%">
+                    <div class="modal-body">
+                        <h4 id="title_paypal"> Paiement par Carte de crédit</h4>
+                        <p>Frais de transaction <span>0.00 €</span></p>
+                        <br>
+                        <!-- bankcard -->
+                        <div class="bank-card">
+                            <div class="bank-card-inner">
+                                <form>
+                                    <div class="bank-card-front">
+                                        <br>
+                                        <div class="line_card_title">
+                                            <h2>Bank Card</h1>
+                                            <img src="./image-page-2/visa_card.png" class="img-fluid"
+                                                style="height: 30px;" alt="">
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="line_card">
+                                            <div class="form-group-card" style="width: 250px">
+                                                <label for="number_card">Numéro de la carte</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="0000 0000 0000 0000">
+                                            </div>
+                                            <div class="form-group-card" style="width: 100px">
+                                                <label for="expire_card">Expire</label>
+                                                <input type="month" class="form-control" placeholder="MM YYYY">
+                                            </div>
+                                        </div>
+                                        <div class="line_card">
+                                            <div class="form-group-card" style="width: 250px">
+                                                <label for="name_card">Titulaire de la carte</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div id="flip_card">CVC <i class="fas fa-undo"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bank-card-back">
+                                        <div class="form-group-card">
+                                            <label for="name_card">CVC</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end bank card -->
+                        <br>
+                        <br>
+                        <div id="paiement_paypal">
+                            <h4>Payez par carte</h4>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog paiement_Box" id="paiement_Box_paypal" style="max-width: 45%; display: none">
+                <div class="modal-content" style="width: 100%">
+                    <div class="modal-body">
+                        <h4 id="title_paypal"> Paiement par PayPal</h4>
+                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <br>
+                        <img src="./image-page-2/payPal_card.png" style="height: 100px;" alt="">
+                        <br>
+                        <br>
+                        <div id="paiement_paypal">
+                            <h4>Payez Par PayPal</h4>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog paiement_Box" id="paiement_Box_crypto" style="max-width: 45%; display: none">
+                <div class="modal-content" style="width: 100%">
+                    <div class="modal-body">
+                        <h4 id="title_paypal"> Paiement par Crypto-monnaies</h4>
+                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <br>
+                        <img src="./image-page-2/crypto_card.png" style="height: 100px;" alt="">
+                        <br>
+                        <br>
+                        <div id="paiement_paypal">
+                            <h4>Payez Par Crypto</h4>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog paiement_Box" id="paiement_Box_googlepay" style="max-width: 45%; display: none">
+                <div class="modal-content" style="width: 100%">
+                    <div class="modal-body">
+                        <h4 id="title_paypal"> Paiement par GooglePay</h4>
+                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <img src="./image-page-2/googlePay_card.png" style="height: 150px;" alt="">
+                        <br>
+                        <div id="paiement_paypal">
+                            <h4>Payez Par GooglePay</h4>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog paiement_Box" id="paiement_Box_amazonpay" style="max-width: 45%; display: none">
+                <div class="modal-content" style="width: 100%">
+                    <div class="modal-body">
+                        <h4 id="title_paypal"> Paiement par AmazonPay</h4>
+                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <br>
+                        <img src="./image-page-2/amazon_card.png" style="height: 100px;" alt="">
+                        <br>
+                        <br>
+                        <div id="paiement_paypal">
+                            <h4>Payez Par AmazonPay</h4>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let button_plus = document.getElementById('button_plus');
+            let elemts = document.getElementsByClassName('clicked_elem');
+            button_plus.addEventListener('click', () => {
+                for (let i = 0; i < elemts.length; i++) {
+                    if (getComputedStyle(elemts[i]).display === "none") {
+                        elemts[i].style.display = "flex";
+                        button_plus.innerHTML = "<h3>Moins</h3>";
+                    } else {
+                        elemts[i].style.display = "none";
+                        button_plus.innerHTML = "<h3>Plus ...</h3>";
+                    }
+                }
+            });
+        </script>
+        <script>
+            let forms_group = document.getElementById("paiement-modal").getElementsByClassName('form-group');
+            let check_boxs = document.getElementsByClassName('custom-control-input-green');
+            let triangles = document.getElementsByClassName('triangle');
+            let paiement_Box = document.getElementsByClassName("paiement_Box");
+            for (let i = 0; i < check_boxs.length; i++) {
+                check_boxs[i].addEventListener("change", () => {
+                    if (check_boxs[i].checked === true) {
+                        triangles[i].style.display = "block";
+                        forms_group[i].style.backgroundColor = "#888888";
+                        triangles[i].style.borderLeftColor = "#888888";
+                        paiement_Box[i].style.display = "block";
+                        paiement_Box[i].style.transform = "translate(296px, 0)";
+                        modalPaiement.style.transform = "translate(-295px, 0)";
+                        for (let j = 0; j < check_boxs.length; j++) {
+                            if (j !== i) {
+                                check_boxs[j].checked = false;
+                                forms_group[j].style.backgroundColor = "#232328";
+                                triangles[j].style.borderLeftColor = "#232328";
+                                paiement_Box[j].style.display = "none";
+                                paiement_Box[j].style.transform = "translate(0, 0)";
+                                triangles[j].style.display = "none";
+                            }
+                        }
+                    }
+                });
+            }
+        </script>
+
+
+        <div class="intro mx-auto my-5 pl-4">
+            <h2>Regarder ces pubs pour avoir vos NP:</h2>
+        </div>
+
+        <div class="mouse mx-auto d-flex flex-wrap justify-content-center">
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+
+            <div id="img" class="img-hover-zoom--brightness m-2 dot-doc">
+                <div> <a href="https://www.youtube.com/watch?v=DI1kAdDMDh8&list=PLwLsbqvBlImHG5yeUCXJ1aqNMgUKi1NK3&index=27"
+                        target="_blank" class="dot"></a></div>
+                <img src="image-page-2/souris.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $(document).ready(function () {
+            randomlyMoveImage();
+        });
+
+        function randomlyMoveImage() {
+            var width = $('.dot-doc').width();
+            var height = $('.dot-doc').height();
+
+            var x = Math.floor((Math.random() * width));
+            var y = Math.floor((Math.random() * height));
+            $(".dot").animate({
+                left: x,
+                top: y
+            }, 0, function () {
+                // Animation complete.
+            });
+
+            setTimeout(randomlyMoveImage, 1500);
+        }
+    </script>
+
+    <div class="intro mx-auto my-5 pl-4">
+        <h2 class="givewayh2">Vous pouvez aussi participer à un giveaway ! </h2>
+    </div>
+    <div class="intro mx-auto my-5 pl-4">
+        <h3 class="givewayh3">Plus vous être nombreux à participer au giveaway, <span
+                style="text-decoration: underline;">plus il y en aura !</span></h3>
+    </div>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600");
+
+        :not(#blah) ::selection {
+            color: white !important;
+            background-color: none !important;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: url("#goo");
+        }
+
+        .button {
+            z-index: 99;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 50px;
+            background: linear-gradient(45deg, #c22525, #D7388A, #3B579D, #23B2F3);
+            border-radius: 20px;
+            color: #FFF;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 200px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: 'Source Sans Pro', sans-serif;
+            text-shadow: 0px 0px 8px #fff;
+
+        }
+
+        .social {
+            opacity: 0;
+            position: relative;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            display: inline-block;
+            color: #FFF;
+            font-size: 70px;
+            text-align: center;
+        }
+
+        .social i {
+            margin-top: 10px;
+        }
+
+        .social a {
+            color: #FFF;
+        }
+
+        .twitter {
+            background: #00aced;
+            margin-top: 85px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+        }
+
+        .facebook {
+            background: #3b5998;
+            margin-top: 85px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+        }
+
+        .instagram {
+            display: inline-block;
+            text-align: center;
+            border-radius: 40px;
+            color: #fff;
+            vertical-align: middle;
+            background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+            margin-top: 85px;
+        }
+
+
+        .youtube {
+            background: #bb0000;
+            margin-top: 85px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+        }
+
+        .clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(56px);
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+
+
+    <div translate="no">
+        <div class="container">
+            <div class="button">Giveaway</div>
+            <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A"
+                    target="_blank"><i class="fab fa-youtube"></i></a></div>
+            <div class=" social instagram"><a href="https://www.instagram.com/" target="_blank"><i
+                        class="fa fa-instagram"></i></a></div>
+            <div class="social facebook"><a href="https://www.facebook.com/" target="_blank"><i
+                        class="fa fa-facebook"></i></a></div>
+            <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i
+                        class="fa fa-twitter"></i></a></div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+        <script id="rendered-js">
+            $(".button").click(function () {
+                $(".social.twitter").toggleClass("clicked");
+                $(".social.facebook").toggleClass("clicked");
+                $(".social.instagram").toggleClass("clicked");
+                $(".social.youtube").toggleClass("clicked");
+                $(".instruction").toggleClass("clicked");
+            });
+        </script>
+
+        <div class="intro mx-auto my-5 pl-4">
+            <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné
+                dans une des photos ou vidéos.</h2>
+        </div>
+
+        <footer id="footer" class="mt-5"> </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

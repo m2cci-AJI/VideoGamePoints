@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../header-footer/header.css">
+    <link rel="stylesheet" href="../header-footer/footer.css">
+    <link rel="stylesheet" href="faq.css">
+    <script> 
+        $(function(){
+          $("#header").load("../header-footer/header.html");
+          $("#footer").load("../header-footer/footer.html"); 
+        });
+    </script>
+</head>
+<body>
+    
+    <header id = "header"> </header>
+    <script id="rendered-js" >
+        function createRipple(event) {
+          const button = event.currentTarget;
+        
+          const circle = document.createElement("span");
+          const diameter = Math.max(button.clientWidth, button.clientHeight);
+          const radius = diameter / 2;
+        
+          circle.style.width = circle.style.height = `${diameter}px`;
+          circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+          circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+          circle.classList.add("ripple");
+        
+          const ripple = button.getElementsByClassName("ripple")[0];
+        
+          if (ripple) {
+            ripple.remove();
+          }
+        
+          button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByTagName("button");
+        for (const button of buttons) {
+          button.addEventListener("click", createRipple);
+        }
+    </script>
+
+    <section class="sec1">
+        <div class="text-center text-white mt-5">
+            <h1>COMMING SOON !</h1><br>
+            <h3>Envoyer nous des questions dans la page support, la 1er requête (Question generale sur Niksoud).</h3>
+            <h4>Les questions les plus pertinante apparaiterons ici.</h4><br><br>
+            <a href="../5eme page/support.html" class="button b-blue">Aller au support</a>
+        </div>
+    </section>
+
+    <footer id = "footer" class="mt-5"> </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

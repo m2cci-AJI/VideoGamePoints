@@ -1,0 +1,20 @@
+/*--FOOTER--*/
+footer {
+    background-color: #000;
+}
+
+footer .content {
+    padding: 50px 25px;
+    width: 90%!important;
+}
+
+footer .niksoud-right {
+    color: #959596;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 800px) {
+    footer .column-under-800 {
+        flex-direction: column !important;
+    }
+}

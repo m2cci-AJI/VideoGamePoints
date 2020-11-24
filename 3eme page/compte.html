@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../header-footer/header.css">
+    <link rel="stylesheet" href="../header-footer/footer.css">
+    <link rel="stylesheet" href="compte.css">
+    <script> 
+        $(function(){
+          $("#header").load("../header-footer/header.html");
+          $("#footer").load("../header-footer/footer.html");  
+        });
+    </script> 
+</head>
+<body>
+    <header id = "header"> </header>
+    <script id="rendered-js" >
+        function createRipple(event) {
+          const button = event.currentTarget;
+        
+          const circle = document.createElement("span");
+          const diameter = Math.max(button.clientWidth, button.clientHeight);
+          const radius = diameter / 2;
+        
+          circle.style.width = circle.style.height = `${diameter}px`;
+          circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+          circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+          circle.classList.add("ripple");
+        
+          const ripple = button.getElementsByClassName("ripple")[0];
+        
+          if (ripple) {
+            ripple.remove();
+          }
+        
+          button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByTagName("button");
+        for (const button of buttons) {
+          button.addEventListener("click", createRipple);
+        }
+    </script>
+
+    <h1 class="text-white text-center mt-5"> BIENVENUE: ???</h1>
+
+    <section class="sec1">
+        <div class='title'>
+            <div class='ui'>
+              <div class='ui_box'>
+                <div class='ui_box__inner'>
+                  <h2 class="text-white">
+                    Client fidel
+                  </h2>
+                  <p>Gagnez l'abonnement Client fidel !</p>
+                  <div class='stat'>
+                    <span>58%</span>
+                  </div>
+                  <div class='progress'>
+                    <div class='progress_bar'></div>
+                  </div>
+                  <p>Dès que la barre est à 100% vous obtiendrez l'abonnement Client fidel</p>
+                  <h5>A quoi sert l'abonnement client fidel ?</h5>
+                  <p>Une fois que vous avez le client fidel, vous bénéficiez de ** pubs tout les ** heures (à la place de ** pubs tous les ** h) et une reponce au support plus rapide !</p>
+                  <h5>Comment augmenter la barre ?</h5>
+                  <p>Vous augmentez cette barre en regardant des pubs dans la page SHOP</p>
+                  <h5>Si vous avez l'abonnement premium :</h5>
+                  <p>Vous gagnerez ** pubs tout les ** heures</p>
+                </div>
+              </div>
+              <div class='ui_box'>
+                <div class='ui_box__inner'>
+                  <h2 class="text-white">
+                     Stats
+                  </h2>
+                  <p>Regardez vous stats :</p>
+                  <br>
+                  <h6>Combien de pubs regarder : *****</h6>
+                  <h6>Combien de np gagnez : *****</h6>
+                  <h6>Combien de np depensser : *****</h6>
+                  <br>
+                  <h6 id="premiumyon">Premium: oui/non</h6>
+                  <h6 id="buyyon">Combien de np acheter : *****</h6>
+                  <h6 id="cfyon">Client fidel : oui/non</h6>
+                </div>
+              </div>
+              <div class='ui_box'>
+                <div class='ui_box__inner'>
+                  <h2 class="text-white">
+                    info personnel
+                  </h2>
+                  <p>Ragardez et changez vos information personnel :</p>
+                  <br>
+                  
+                    <h6>Nom : *************</h6>
+                    <h6>Prenom : *************</h6>
+                    <h6>Pseudo : ***************</h6>
+                    <h6>Mail : ********************</h6>
+                    <h6>Pseudo lol : ***************</h6>
+                    <h6>RIOT ID : *************</h6>
+                    <h6>password : ******************</h6>
+                    <h6>number phone : **********</h6>
+              </div>
+              <br>
+                <div class="navbar-nav flex-column align-items-center">
+                    <a class="nav-link text-white p-0 w-100 my-1" href="#">
+                        <button class="buttonedit w-50" data-toggle="modal" data-target="#buttonedit-modal">Edit</button>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <div class="modal fade" id="buttonedit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="color-bar"></div>
+                <div class="d-flex justify-content-between align-items-center mt-3 mx-4">
+                    <h1 class="text-white">Edit</h1>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <i class="btnclosei fas fa-times-circle"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group text-white d-flex">
+                            <input type="text" class="form-control mx-1" id="nom-inscription" placeholder="Nom" autocapitalize="off" autocorrect="off" required>
+                            <input type="text" class="form-control mx-1" id="prenom-inscription" placeholder="Prenom" autocapitalize="off" autocorrect="off" required>
+                        </div>
+                        <div class="form-group text-white d-flex">
+                            <input type="text" class="form-control mx-1" id="pseudo-inscription" placeholder="Pseudo" autocapitalize="off" autocorrect="off" required>
+                            <input type="email" class="form-control mx-1" id="email-pseudo-inscription" aria-describedby="emailHelp" placeholder="E-mail" autocapitalize="off" autocorrect="off" required>
+                        </div>
+                        <div class="form-group text-white d-flex">
+                            <input type="text" class="form-control mx-1" id="pseudoleagueoflegends-inscription" placeholder="Pseudo league of legends" autocapitalize="off" autocorrect="off" required>
+                            <input type="text" class="form-control mx-1" id="RIOTID-inscription" placeholder="RIOT ID" autocapitalize="off" autocorrect="off" required>
+                        </div>
+                        <div class="form-group text-white d-flex">
+                            <input type="password" class="form-control mx-1" placeholder="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" autocapitalize="off" autocorrect="off" id="password" name="pwd1" onchange="form.pwd2.pattern = RegExp.escape(this.value);" oninvalid="setCustomValidity('A capital letter, A number, Minimum 8 characters, A lowercase letter')" oninvalid="setCustomValidity('Custom error message')" onchange="try{setCustomValidity('')}catch(e){}" onkeypress="try{setCustomValidity('')}catch(e){}">
+                        </div>
+                        <div class="form-group text-white mx-1">
+                            <input type="tel" maxlength="10" min="0" class="form-control" id="pseudo-inscription" placeholder="N° de téléphone (facultatif)">
+                        </div>
+                        <br>
+                        <div class="form-group text-white d-flex">
+                            <input type="password" class="form-control mx-1" placeholder="Current Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" autocapitalize="off" autocorrect="off" id="password" name="pwd1" onchange="form.pwd2.pattern = RegExp.escape(this.value);" oninvalid="setCustomValidity('A capital letter, A number, Minimum 8 characters, A lowercase letter')" oninvalid="setCustomValidity('Custom error message')" onchange="try{setCustomValidity('')}catch(e){}" onkeypress="try{setCustomValidity('')}catch(e){}">
+                        </div>
+                        <div class="d-flex justify-content-center mb-2 mt-4">
+                            <button type="submit" class="btnc w-75 text-white"><i class="fas fa-lock mr-2"></i>Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ghost-nav"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer id = "footer" class="mt-5"> </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

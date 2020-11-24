@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../header-footer/header.css">
+    <link rel="stylesheet" href="../header-footer/footer.css">
+    <link rel="stylesheet" href="pagepsc.css">
+    <script> 
+        $(function(){
+          $("#header").load("../header-footer/header.html"); 
+          $("#footer").load("../header-footer/footer.html"); 
+        });
+    </script>
+</head>
+
+<body>
+
+    <header id = "header"> </header>
+    <script id="rendered-js">
+        function createRipple(event) {
+            const button = event.currentTarget;
+
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+
+            const ripple = button.getElementsByClassName("ripple")[0];
+
+            if (ripple) {
+                ripple.remove();
+            }
+
+            button.appendChild(circle);
+        }
+
+        const buttons = document.getElementsByTagName("button");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+    </script>
+
+    <section class="sec1 my-5 d-flex align-items-center" style="min-height: 500px;">
+        <div class="container">
+            <div class="title text-center text-white mt-0">
+                <h1>Paysafecard</h1>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mt-2 d-flex flex-wrap justify-content-around">
+                            <div class="champion text-white m-2">
+                                <button class="champion-image" data-toggle="modal" data-target="#unlock-modal"
+                                    style="width: 100%;">
+                                    <img src="../lol/logo_paysafecard_10eur.png" alt = "" style="width: 100%; height: 100%;">
+                                </button>
+                                <div class="champion-title pl-4 py-2">
+                                    <h2>10 euros</h2>
+                                </div>
+                            </div>
+                            <div class="champion text-white m-2">
+                                <button class="champion-image" data-toggle="modal" data-target="#unlock-modal"
+                                    style="width: 100%;">
+                                    <img src="../lol/logo_paysafecard_25eur.png" alt = "" style="width: 100%; height: 100%;">
+                                </button>
+                                <div class="champion-title pl-4 py-2">
+                                    <h2>25 euros</h2>
+                                </div>
+                            </div>
+                            <div class="champion text-white m-2">
+                                <button class="champion-image" data-toggle="modal" data-target="#unlock-modal"
+                                    style="width: 100%;">
+                                    <img src="../lol/logo_paysafecard_50eur.png" alt = "" style="width: 100%; height: 100%;">
+                                </button>
+                                <div class="champion-title pl-4 py-2">
+                                    <h2>50 euros</h2>
+                                </div>
+                            </div>
+                            <!-- Modal Aatrox -->
+                            <div class="modal fade" id="unlock-modal" tabindex="-1" aria-labelledby="aatrox-modalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" style="pointer-events: auto;">
+                                    <div class="modal-content mx-4">
+                                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="../lol/image-page-4/modal-image/aatrox.jpg" alt = "" class="d-block w-100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-body text-center pt-0 text-white">
+                                            <h1>Aatrox</h1>
+                                            <p>Épée des Darkin</p>
+                                            <div class="divider mx-auto"></div>
+                                            <div class="d-flex justify-content-center my-4">
+                                                <button type="submit" class="btn w-50 text-white"></i>500<img
+                                                        class="pl-2" src="../header-footer-logo/np.png" alt="np logo"
+                                                        height="30"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </section>
+
+    <footer id = "footer" class="mt-5"> </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
