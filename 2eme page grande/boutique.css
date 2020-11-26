@@ -290,7 +290,7 @@ h1{
 }
 
 .paiement_Box {
-    top: -668px;
+    top: -615px;
     z-index: -1;
     transition: transform 330ms ease-in-out;
 }
