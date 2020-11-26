@@ -469,25 +469,51 @@ h1{
 }
 
 /* bank card */
-#flip_card {
-    width: 60px;
-    height: 30px;
+#flip_card1, #flip_card2 {
     background-color: transparent;
     text-shadow: 0px 0px 7px white;
     color: white;
-    border-width: 2px;
-    border-style: solid;
     cursor: pointer;
 }
+.form-group-card-back {
+    width: 100px;
+    position: relative;
+    left: 280px;
+}
 
-#flip_card:hover {
+#band {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: none;
+}
+
+
+#flip_card1 {
+    position: relative;
+    left: 10px;
+}
+
+#flip_card2 {
+    position: relative;
+    width: 0;
+    left: 200px;
+}
+
+#flip_card2:hover, #flip_card1:hover {
     text-shadow: 0px 0px 7px #ef473a;
     color: #ef473a;
 }
 
 .bank-card .form-group-card {
     background-color: transparent;
+    re
 }
+
+.form-group-card input::placeholder {
+    font-size: 23px;
+}
+
 .line_card_title, .line_card {
     display: flex;
     flex-direction: row;
@@ -529,10 +555,6 @@ h1{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .bank-card:active .bank-card-inner {
-    transform: rotateY(180deg);
-  }
-  
   .bank-card-front, .bank-card-back {
     position: absolute;
     width: 100%;
@@ -551,6 +573,15 @@ h1{
     color: white;
     transform: rotateY(180deg);
   }
+
+  #line_card_end {
+    align-items: flex-end;
+    position: relative;
+    right: 25px;
+}
+#line_card_end .form-group-card-end {
+    margin-top: 5px;
+ }
 /* end bank card */
 
 

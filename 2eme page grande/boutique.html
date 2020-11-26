@@ -304,19 +304,26 @@
                                                 <input type="month" class="form-control" placeholder="MM YYYY">
                                             </div>
                                         </div>
-                                        <div class="line_card">
-                                            <div class="form-group-card" style="width: 250px">
+                                        <div class="line_card" id = "line_card_end">
+                                            <div class="form-group-card-end" style="width: 250px">
                                                 <label for="name_card">Titulaire de la carte</label>
                                                 <input type="text" class="form-control">
                                             </div>
-                                            <div id="flip_card">CVC <i class="fas fa-undo"></i>
+                                            <div id="flip_card1"><i class="fas fa-undo"></i>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="bank-card-back">
-                                        <div class="form-group-card">
+                                        <br>
+                                        <br>
+                                        <div id = "band"></div>
+                                        <br>
+                                        <br>
+                                        <div class="form-group-card-back">
                                             <label for="name_card">CVC</label>
                                             <input type="text" class="form-control">
+                                        </div>
+                                        <div id="flip_card2"><i class="fas fa-undo"></i>
                                         </div>
                                     </div>
                                 </form>
@@ -395,6 +402,17 @@
                 </div>
             </div>
         </div>
+        <script>
+            let flip_card1 = document.getElementById('flip_card1');
+            let flip_card2 = document.getElementById('flip_card2');
+            let bank_card_inner = document.getElementsByClassName('bank-card-inner')[0];
+            flip_card1.addEventListener("click", () => {
+                bank_card_inner.style.transform = "rotateY(180deg)";
+            });
+            flip_card2.addEventListener("click", () => {
+                bank_card_inner.style.transform = "rotateY(0deg)";
+            });
+        </script>
         <script>
             let button_plus = document.getElementById('button_plus');
             let elemts = document.getElementsByClassName('clicked_elem');
