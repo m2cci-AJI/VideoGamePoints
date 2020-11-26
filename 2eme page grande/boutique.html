@@ -301,7 +301,6 @@
                                                     class="img-fluid" style="height: 50px; display: none;" alt="">
                                                 <img src="./image-page-2/amex_card.png" id="amex_card" class="img-fluid"
                                                     style="height: 50px; display: none;" alt="">
-
                                         </div>
 
                                         <br>
@@ -419,6 +418,24 @@
             </div>
         </div>
         <script>
+            let select_elem = document.getElementById('paiement-modal').getElementsByTagName('select')[0];
+            console.log('select_elem', select_elem);
+            let bank_card_front = document.getElementsByClassName('bank-card-front')[0];
+            select_elem.addEventListener('change', () => {
+                if(select_elem.value === "dollar") {
+                    bank_card_front.style.backgroundImage = "url('./image-page-2/dollar.png')";
+                    bank_card_front.style.backgroundRepeat = "no-repeat";
+                    bank_card_front.style.backgroundSize = "200px";
+                    bank_card_front.style.backgroundPosition = "center";
+                } else {
+                    bank_card_front.style.backgroundImage = "url('./image-page-2/euro.png')";
+                    bank_card_front.style.backgroundRepeat = "no-repeat";
+                    bank_card_front.style.backgroundSize = "250px";
+                    bank_card_front.style.backgroundPosition = "center";
+                }
+            });
+        </script>
+        <script>
             let imgs = document.getElementById('card-title').getElementsByTagName('img');
             let input_number_card = document.getElementById('input_number_card');
             let numbers_master = ['22', '23', '24', '25', '26', '27', '51', '52', '53', '54', '55'];
@@ -438,7 +455,6 @@
 
             input_number_card.addEventListener('keyup', (event) => {
                 if (numbers_master.includes(input_number_card.value)) {
-                    console.log("oppps");
                     imgs[0].style.display = "block";
                     getNoneOthers(0);
                 } else if (numbers_visa.includes(input_number_card.value)) {
