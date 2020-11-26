@@ -510,7 +510,9 @@ h1{
     background-color: transparent;
 }
 
-.form-group-card input::placeholder, .form-group-card-end input::placeholder, .form-group-card input, .form-group-card-end input {
+.form-group-card input::placeholder, .form-group-card-end input::placeholder, .form-group-card-back input::placeholder,
+ .form-group-card input, .form-group-card-end input,
+ .form-group-card-back input {
     font-size: 23px;
 }
 
