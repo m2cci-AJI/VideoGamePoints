@@ -479,6 +479,7 @@ h1{
     width: 100px;
     position: relative;
     left: 280px;
+    color: black;
 }
 
 #band {
@@ -507,10 +508,9 @@ h1{
 
 .bank-card .form-group-card {
     background-color: transparent;
-    re
 }
 
-.form-group-card input::placeholder {
+.form-group-card input::placeholder, .form-group-card-end input::placeholder, .form-group-card input, .form-group-card-end input {
     font-size: 23px;
 }
 
@@ -543,7 +543,10 @@ h1{
     width: 400px;
     height: 280px;
     perspective: 1000px;
+    
   }
+
+ 
   
   .bank-card-inner {
     position: relative;
@@ -561,6 +564,7 @@ h1{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-radius: 10px;
   }
   
   .bank-card-front {
