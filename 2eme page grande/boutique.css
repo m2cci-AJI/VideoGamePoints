@@ -468,6 +468,25 @@ h1{
     color: white;
 }
 
+.recommand {
+    background: #ef473a !important;
+    background: linear-gradient(to right, #cb2d3e, #ef473a) !important;
+    box-shadow: 0px 0px 7px #ef473a !important;
+    color: white;
+    position: absolute;
+    height: 15px;
+    width: 70px;
+    right: 0;
+    top: 0;
+    text-align: center;
+    font-size: 10px;
+    transform: translateY(-7px);
+}
+
+#modalPaiement .modal-body form .form-group:first-child {
+    position: relative;
+}
+
 /* bank card */
 #flip_card1, #flip_card2 {
     background-color: transparent;
@@ -549,8 +568,6 @@ h1{
     
   }
 
- 
-  
   .bank-card-inner {
     position: relative;
     width: 100%;
