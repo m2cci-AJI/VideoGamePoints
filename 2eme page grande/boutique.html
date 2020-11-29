@@ -493,24 +493,17 @@
             });
         </script>
         <script>
-            var counter1 = 0;
-            var counter2 = 0;
             function addSeparator(element) {
-                var val = $('#' + element).val();
-                var separator = " ";
-                var return_val = val + separator;
-                return return_val;
+                return $('#' + element).val() + " ";
             }
-            $('#input_number_card').keypress(function () {  
-                counter1++;
-                if ((counter1 == 5) || (counter1 == 9) || (counter1 == 13)) {
+            $('#input_number_card').keypress(function () { 
+                if(($('#input_number_card').val().length === 4) || ($('#input_number_card').val().length === 9) || ($('#input_number_card').val().length === 14)) {
                     var new_value = addSeparator('input_number_card');
                     $('#input_number_card').val(new_value);
                 }
             });
             $('#input_expire_card').keypress(function () {
-                counter2++;
-                if (counter2 == 3) {
+                if($('#input_expire_card').val().length === 2) {
                     var new_value = addSeparator('input_expire_card');
                     $('#input_expire_card').val(new_value);
                 }
