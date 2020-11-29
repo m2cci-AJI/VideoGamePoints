@@ -393,14 +393,14 @@ h1{
 }
 
 /* Chrome, Safari, Edge, Opera */
-#input_number_card::-webkit-outer-spin-button, #input_expire_card::-webkit-outer-spin-button, #input_cvc_card::-webkit-outer-spin-button,
-#input_number_card::-webkit-inner-spin-button, #input_expire_card::-webkit-inner-spin-button, #input_cvc_card::-webkit-inner-spin-button {
+#input_expire_card::-webkit-outer-spin-button,
+#input_expire_card::-webkit-inner-spin-button {
     -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-#input_number_card, #input_expire_card, #input_cvc_card {
+#input_expire_card {
   -moz-appearance: textfield;
 }
 

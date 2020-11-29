@@ -309,12 +309,12 @@
                                             <div class="form-group-card" style="width: 250px">
                                                 <label for="number_card">Numéro de la carte</label>
                                                 <input type="text" id="input_number_card" class="form-control"
-                                                    placeholder="0000 0000 0000 0000" minlength="16" maxlength="16"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                                                    placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"  oninput="this.value = this.value.replace(/[^0-9.\s]/g, '');" required>
                                             </div>
                                             <div class="form-group-card" style="width: 100px">
                                                 <label for="expire_card">Expire</label>
                                                 <input type="text" id="input_expire_card" class="form-control"
-                                                    placeholder="MM YY" minlength="4" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                                                    placeholder="MM YY" minlength="5" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.\s]/g, '');" required>
                                             </div>
                                         </div>
                                         <div class="line_card" id="line_card_end">
@@ -501,19 +501,16 @@
                 var return_val = val + separator;
                 return return_val;
             }
-
-            $('#input_number_card').keypress(function () {
-                console.log("opps");
+            $('#input_number_card').keypress(function () {  
                 counter1++;
                 if ((counter1 == 5) || (counter1 == 9) || (counter1 == 13)) {
-                    console.log("hiiii");
                     var new_value = addSeparator('input_number_card');
                     $('#input_number_card').val(new_value);
                 }
             });
             $('#input_expire_card').keypress(function () {
                 counter2++;
-                if ((counter2 == 3) || (counter2 == 5)) {
+                if (counter2 == 3) {
                     var new_value = addSeparator('input_expire_card');
                     $('#input_expire_card').val(new_value);
                 }
