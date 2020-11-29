@@ -308,13 +308,13 @@
                                         <div class="line_card">
                                             <div class="form-group-card" style="width: 250px">
                                                 <label for="number_card">Numéro de la carte</label>
-                                                <input type="number" id="input_number_card" class="form-control"
-                                                    placeholder="0000 0000 0000 0000" maxlength="19" required>
+                                                <input type="text" id="input_number_card" class="form-control"
+                                                    placeholder="0000 0000 0000 0000" minlength="16" maxlength="16"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
                                             </div>
                                             <div class="form-group-card" style="width: 100px">
                                                 <label for="expire_card">Expire</label>
-                                                <input type="number" id="input_expire_card" class="form-control"
-                                                    placeholder="MM YY" maxlength="5" required>
+                                                <input type="text" id="input_expire_card" class="form-control"
+                                                    placeholder="MM YY" minlength="4" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
                                             </div>
                                         </div>
                                         <div class="line_card" id="line_card_end">
@@ -322,7 +322,7 @@
                                                 <label for="name_card">Titulaire de la carte</label>
                                                 <input type="text" class="form-control"
                                                     onkeyup="this.value=this.value.toUpperCase()" onkeypress="return (event.charCode > 64 && 
-                                                    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+                                                    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode === 32) "
                                                     placeholder="UTILISATEUR"  required>
                                             </div>
                                             <div id="flip_card1" title = "Vers le dos de la carte"><i class="fa fa-rotate-right"></i>
@@ -337,7 +337,7 @@
                                         <br>
                                         <div class="form-group-card-back">
                                             <label for="name_card">CVC</label>
-                                            <input type="number" id = "input_cvc_card"class="form-control" placeholder="000" maxlength="3" required>
+                                            <input type="text" id = "input_cvc_card"class="form-control" placeholder="000" minlength="3" maxlength="3" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
                                         </div>
                                         <br>
                                         <div id="flip_card2" title = "Vers la face de la carte"><i class="fas fa-undo"></i>
@@ -503,8 +503,10 @@
             }
 
             $('#input_number_card').keypress(function () {
+                console.log("opps");
                 counter1++;
                 if ((counter1 == 5) || (counter1 == 9) || (counter1 == 13)) {
+                    console.log("hiiii");
                     var new_value = addSeparator('input_number_card');
                     $('#input_number_card').val(new_value);
                 }
