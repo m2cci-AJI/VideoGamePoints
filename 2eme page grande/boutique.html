@@ -348,7 +348,7 @@
                         <!-- end bank card -->
                         <br>
                         <br>
-                        <div class="paiement_method">
+                        <div  class = "paiement_method">
                             <h4>Payez par carte</h4>
                         </div>
                         <br>
@@ -364,7 +364,7 @@
                         <img src="./image-page-2/payPal_card.png" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div class="paiement_method">
+                        <div class = "paiement_method">
                             <h4>Payez Par PayPal</h4>
                         </div>
                         <br>
@@ -380,7 +380,7 @@
                         <img src="./image-page-2/crypto_card.png" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div class="paiement_method">
+                        <div class = "paiement_method">
                             <h4>Payez Par Crypto</h4>
                         </div>
                         <br>
@@ -394,7 +394,7 @@
                         <p>Frais de transaction <span>1.09 €</span></p>
                         <img src="./image-page-2/googlePay_card.png" style="height: 150px;" alt="">
                         <br>
-                        <div class="paiement_method">
+                        <div class = "paiement_method">
                             <h4>Payez Par GooglePay</h4>
                         </div>
                         <br>
@@ -410,7 +410,7 @@
                         <img src="./image-page-2/amazon_card.png" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div class="paiement_method">
+                        <div class = "paiement_method">
                             <h4>Payez Par AmazonPay</h4>
                         </div>
                         <br>
@@ -419,7 +419,19 @@
             </div>
         </div>
         <script>
-        
+            let customCheck6 = document.getElementById('customCheck6');
+            let paiement_method = document.getElementsByClassName('paiement_method');
+            customCheck6.addEventListener('change', () => {
+                if(customCheck6.checked) {
+                     for(let i = 0; i < paiement_method.length; i++) {
+                        paiement_method[i].style.cursor = "pointer";
+                     }
+                } else {
+                    for(let i = 0; i < paiement_method.length; i++) {
+                        paiement_method[i].style.cursor = "not-allowed";
+                     }
+                }
+            })
         </script>
         <script>
             let select_elem = document.getElementById('paiement-modal').getElementsByTagName('select')[0];
