@@ -392,6 +392,18 @@ h1{
     border-radius: 2px;
 }
 
+/* Chrome, Safari, Edge, Opera */
+#input_number_card::-webkit-outer-spin-button, #input_expire_card::-webkit-outer-spin-button, #input_cvc_card::-webkit-outer-spin-button,
+#input_number_card::-webkit-inner-spin-button, #input_expire_card::-webkit-inner-spin-button, #input_cvc_card::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#input_number_card, #input_expire_card, #input_cvc_card {
+  -moz-appearance: textfield;
+}
+
  .paiement_method {
     border: none;
     background: linear-gradient(45deg, #8e2de2, #4a00e0);
