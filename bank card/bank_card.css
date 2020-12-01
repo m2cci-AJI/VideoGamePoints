@@ -1,0 +1,124 @@
+/* bank card */
+#flip_card1, #flip_card2 {
+    background-color: transparent;
+    text-shadow: 0px 0px 7px white;
+    color: white;
+    cursor: pointer;
+}
+.form-group-card-back {
+    width: 25%;
+    position: relative;
+    left: 70%;
+    color: black;
+}
+
+#band {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: none;
+}
+
+
+#flip_card1 {
+    position: relative;
+    left: 10px;
+}
+
+#flip_card2 {
+    position: relative;
+    width: 0;
+    left: 50%;
+}
+
+#flip_card2:hover, #flip_card1:hover {
+    text-shadow: 0px 0px 7px #ef473a;
+    color: #ef473a;
+}
+
+
+.bank-card .form-group-card {
+    background-color: transparent;
+}
+
+.form-group-card input::placeholder, .form-group-card-end input::placeholder, .form-group-card-back input::placeholder,
+ .form-group-card input, .form-group-card-end input,
+ .form-group-card-back input {
+    font-size: 23px;
+}
+
+.line_card_title, .line_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#input_number::placeholder {
+    font-size: 25px;
+}
+
+#name-card {
+    position: relative;
+    right: 15px;
+}
+
+.line_card_title {
+   align-items: center;
+}
+
+.line_card {
+    align-items: flex-end;
+ }
+
+.bank-card {
+    background-color: transparent;
+    width: 80%;
+    height: 280px;
+    perspective: 1000px;
+    
+  }
+
+  .bank-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .bank-card-front, .bank-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    
+  }
+  
+  .bank-card-front {
+    background-color: #bbb;
+    color: black;
+    background-image: url('./image-page-2/euro.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center;
+  }
+  
+  .bank-card-back {
+    background-color: #bbb;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  #line_card_end {
+    align-items: flex-end;
+    
+}
+#line_card_end .form-group-card-end {
+    margin-top: 5px;
+ }
+/* end bank card */

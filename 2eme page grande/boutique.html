@@ -281,75 +281,10 @@
                         <h4 id="title_paypal"> Paiement par Carte de crédit</h4>
                         <p>Frais de transaction <span>0.00 €</span></p>
                         <br>
-                        <!-- bankcard -->
-                        <div class="bank-card">
-                            <div class="bank-card-inner">
-                                <form>
-                                    <div class="bank-card-front">
-                                        <br>
-                                        <div class="line_card_title" id="card-title">
-                                            <h2>Bank Card</h1>
-                                                <img src="./image-page-2/master_card.png" id="master_card"
-                                                    class="img-fluid"
-                                                    style="height: 40px; margin-left:10px; display: none;" alt="">
-                                                <img src="./image-page-2/visa_card.png" id="visa_card" class="img-fluid"
-                                                    style="height: 30px; display: none;" alt="">
-                                                <img src="./image-page-2/diners_card.png" id="diners_card"
-                                                    class="img-fluid" style="height: 50px; display: none;" alt="">
-                                                <img src="./image-page-2/maestro_card.png" id="maestro_card"
-                                                    class="img-fluid" style="height: 40px; display: none;" alt="">
-                                                <img src="./image-page-2/network_card.png" id="network_card"
-                                                    class="img-fluid" style="height: 50px; display: none;" alt="">
-                                                <img src="./image-page-2/amex_card.png" id="amex_card" class="img-fluid"
-                                                    style="height: 50px; display: none;" alt="">
-                                        </div>
-
-                                        <br>
-                                        <div class="line_card">
-                                            <div class="form-group-card" style="width: 250px">
-                                                <label for="number_card">Numéro de la carte</label>
-                                                <input type="text" id="input_number_card" class="form-control"
-                                                    placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"  oninput="this.value = this.value.replace(/[^0-9.\s]/g, '');" required>
-                                            </div>
-                                            <div class="form-group-card" style="width: 100px">
-                                                <label for="expire_card">Expire</label>
-                                                <input type="text" id="input_expire_card" class="form-control"
-                                                    placeholder="MM YY" minlength="5" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.\s]/g, '');" required>
-                                            </div>
-                                        </div>
-                                        <div class="line_card" id="line_card_end">
-                                            <div class="form-group-card-end" style="width: 200px">
-                                                <label for="name_card">Titulaire de la carte</label>
-                                                <input type="text" class="form-control"
-                                                    onkeyup="this.value=this.value.toUpperCase()" onkeypress="return (event.charCode > 64 && 
-                                                    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode === 32) "
-                                                    placeholder="UTILISATEUR"  required>
-                                            </div>
-                                            <div id="flip_card1" title = "Vers le dos de la carte"><i class="fa fa-rotate-right"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bank-card-back">
-                                        <br>
-                                        <br>
-                                        <div id="band"></div>
-                                        <br>
-                                        <br>
-                                        <div class="form-group-card-back">
-                                            <label for="name_card">CVC</label>
-                                            <input type="text" class="form-control" placeholder="000" minlength="3" maxlength="3" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
-                                        </div>
-                                        <br>
-                                        <div id="flip_card2" title = "Vers la face de la carte"><i class="fas fa-undo"></i>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- end bank card -->
+                        <img src="./image-page-2/stripe_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div  class = "paiement_method">
+                        <div class="paiement_method">
                             <h4>Payez par carte</h4>
                         </div>
                         <br>
@@ -365,7 +300,7 @@
                         <img src="./image-page-2/payPal_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div class = "paiement_method">
+                        <div class="paiement_method">
                             <h4>Payez Par PayPal</h4>
                         </div>
                         <br>
@@ -381,7 +316,7 @@
                         <img src="./image-page-2/crypto_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div class = "paiement_method">
+                        <div class="paiement_method">
                             <h4>Payez Par Crypto</h4>
                         </div>
                         <br>
@@ -393,9 +328,9 @@
                     <div class="modal-body">
                         <h4 id="title_paypal"> Paiement par GooglePay</h4>
                         <p>Frais de transaction <span>1.09 €</span></p>
-                        <img src="./image-page-2/googlePay_card.png"class="img-fluid" style="height: 150px;" alt="">
+                        <img src="./image-page-2/googlePay_card.png" class="img-fluid" style="height: 150px;" alt="">
                         <br>
-                        <div class = "paiement_method">
+                        <div class="paiement_method">
                             <h4>Payez Par GooglePay</h4>
                         </div>
                         <br>
@@ -411,7 +346,7 @@
                         <img src="./image-page-2/amazon_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
-                        <div class = "paiement_method">
+                        <div class="paiement_method">
                             <h4>Payez Par AmazonPay</h4>
                         </div>
                         <br>
@@ -423,14 +358,14 @@
             let customCheck6 = document.getElementById('customCheck6');
             let paiement_method = document.getElementsByClassName('paiement_method');
             customCheck6.addEventListener('change', () => {
-                if(customCheck6.checked) {
-                     for(let i = 0; i < paiement_method.length; i++) {
+                if (customCheck6.checked) {
+                    for (let i = 0; i < paiement_method.length; i++) {
                         paiement_method[i].style.cursor = "pointer";
-                     }
+                    }
                 } else {
-                    for(let i = 0; i < paiement_method.length; i++) {
+                    for (let i = 0; i < paiement_method.length; i++) {
                         paiement_method[i].style.cursor = "not-allowed";
-                     }
+                    }
                 }
             })
         </script>
@@ -439,7 +374,7 @@
             console.log('select_elem', select_elem);
             let bank_card_front = document.getElementsByClassName('bank-card-front')[0];
             select_elem.addEventListener('change', () => {
-                if(select_elem.value === "dollar") {
+                if (select_elem.value === "dollar") {
                     bank_card_front.style.backgroundImage = "url('./image-page-2/dollar.png')";
                     bank_card_front.style.backgroundRepeat = "no-repeat";
                     bank_card_front.style.backgroundSize = "200px";
@@ -450,82 +385,6 @@
                     bank_card_front.style.backgroundSize = "250px";
                     bank_card_front.style.backgroundPosition = "center";
                 }
-            });
-        </script>
-        <script>
-            let imgs = document.getElementById('card-title').getElementsByTagName('img');
-            let input_number_card = document.getElementById('input_number_card');
-            let numbers_master = ['22', '23', '24', '25', '26', '27', '51', '52', '53', '54', '55'];
-            let numbers_visa = ['40', '41', '42', '43', '44', '45', '46', '47', '48', '49'];
-            let numbers_diners = ['36', '38'];
-            let numbers_maestro = ['56', '58', '67'];
-            let numbers_network = ['65'];
-            let numbers_express = ['34', '37'];
-
-            function getNoneOthers(number) {
-                for (let i = 0; i < imgs.length; i++) {
-                    if (i !== number) {
-                        imgs[i].style.display = "none";
-                    }
-                }
-            }
-
-            input_number_card.addEventListener('keyup', (event) => {
-                if (numbers_master.includes(input_number_card.value)) {
-                    imgs[0].style.display = "block";
-                    getNoneOthers(0);
-                } else if (numbers_visa.includes(input_number_card.value)) {
-                    imgs[1].style.display = "block";
-                    getNoneOthers(1);
-                } else if (numbers_diners.includes(input_number_card.value)) {
-                    imgs[2].style.display = "block";
-                    getNoneOthers(2);
-                } else if (numbers_maestro.includes(input_number_card.value)) {
-                    imgs[3].style.display = "block";
-                    getNoneOthers(3);
-                } else if (numbers_network.includes(input_number_card.value)) {
-                    imgs[4].style.display = "block";
-                    getNoneOthers(4);
-                } else if (numbers_express.includes(input_number_card.value)) {
-                    imgs[5].style.display = "block";
-                    getNoneOthers(5);
-                }
-            });
-        </script>
-        <script>
-            var counter1 = 0;
-            var counter2 = 0;
-            function addSeparator(element) {
-                var val = $('#' + element).val();
-                var separator = " ";
-                var return_val = val + separator;
-                return return_val;
-            }
-            $('#input_number_card').keypress(function () {  
-                counter1++;
-                if ((counter1 == 5) || (counter1 == 9) || (counter1 == 13)) {
-                    var new_value = addSeparator('input_number_card');
-                    $('#input_number_card').val(new_value);
-                }
-            });
-            $('#input_expire_card').keypress(function () {
-                counter2++;
-                if (counter2 == 3) {
-                    var new_value = addSeparator('input_expire_card');
-                    $('#input_expire_card').val(new_value);
-                }
-            });
-
-        </script>
-        <script>
-            let flip_card1 = document.getElementById('flip_card1');
-            let flip_card2 = document.getElementById('flip_card2');
-            let bank_card_inner = document.getElementsByClassName('bank-card-inner')[0];
-            flip_card1.addEventListener("click", () => {
-                bank_card_inner.style.transform = "rotateY(180deg)";
-            });
-            flip_card2.addEventListener("click", () => {
-                bank_card_inner.style.transform = "rotateY(0deg)";
             });
         </script>
         <script>
@@ -555,13 +414,13 @@
                         forms_group[i].style.backgroundColor = "#888888";
                         triangles[i].style.borderLeftColor = "#888888";
                         paiement_Box[i].style.display = "block";
-                        if(window.innerWidth <= "700") {
-                            modalPaiement.style.zIndex = "-99999999";    
+                        if (window.innerWidth <= "700") {
+                            modalPaiement.style.zIndex = "-99999999";
                         } else {
-                            paiement_Box[i].style.transform = "translate(296px, 0)";
+                            paiement_Box[i].style.transform = "translate(366px, 0)";
                             modalPaiement.style.transform = "translate(-295px, 0)";
                         }
-                        
+
                         for (let j = 0; j < check_boxs.length; j++) {
                             if (j !== i) {
                                 check_boxs[j].checked = false;
@@ -821,6 +680,86 @@
                 $(".instruction").toggleClass("clicked");
             });
         </script>
+        <h2 style="text-align: center;color: white;">Choisissez votre forfait Premium</h2>
+        <br>
+        <h5 style="text-align: center;color: white;">Avec nos critiques incroyables et notre garantie de remboursement,
+            qu'attendez-vous?</h5>
+        <br>
+        <br>
+        <div class="pricing-table">
+            <div class="pricing-item">
+                <div class="pricing-title">
+                    BASIQUE
+                </div>
+                <div class="pricing-value">€2<span class="smallText">.99</span>
+                    <span class="undertext">/Mois</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><span class="keywords">200 NP</span> gratuits tous les mois</li>
+                    <li><span class="keywords">2 publicités</span> tous les heures</li>
+                    <li> Réponse du support plus rapide</li>
+                    <li><span class="keywords">2 semaines</span> d'essai gratuites</li>
+                </ul>
+                <div class="button" id="buy_premium1" data-toggle="modal"
+                data-target="#paiement-modal">Acheter</div>
+            </div>
+            <div class="pricing-item pricing-featured">
+                <div class='selected'>Recommandé</div>
+                <div class="pricing-title">
+                    SUPER
+                </div>
+                <div class="pricing-value">€4.<span class="smallText">.99</span>
+                    <span class="undertext">/Mois</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><span class="keywords">400 NP</span> gratuits tous les mois</li>
+                    <li><span class="keywords">6 publicités</span> tous les heures</li>
+                    <li> Réponse du support plus rapide</li>
+                    <li><span class="keywords">200 NP</span> offerts après 6 mois</li>
+                </ul>
+                <div class="button" id="buy_premium2" data-toggle="modal"
+                data-target="#paiement-modal">Acheter</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 style="text-align: center;color: white;">Achetez vos points NP</h2>
+        <br>
+        <h5 style="text-align: center;color: white;">Avec nos critiques incroyables et notre garantie de remboursement,
+            qu'attendez-vous?</h5>
+        <br>
+        <br>
+        <div class="pricing-table">
+            <div class="pricing-item pricing-featured">
+                <div class="pricing-offres-title">
+                    OFFRES
+                </div>
+                <div class="pricing-value-offres">€4.<span class="smallText">.99</span>
+                    <span class="undertext">/Mois</span>
+                </div>
+                <br>
+                <span class="keywords"><strong>Sélectionnez le nombre de NP à
+                        acheter</strong></span>
+                <br>
+                <br>
+                <div class="input-group mb-2" style="width: 80%; position: relative; left: 10%;">
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option value="20">20 NP</option>
+                        <option value="40">40 NP</option>
+                        <option value="60">60 NP</option>
+                    </select>
+                </div>
+                <br>
+                <div class="button" id="buy_premium3" data-toggle="modal"
+                data-target="#paiement-modal">Acheter</div>
+            </div>
+        </div>
 
         <div class="intro mx-auto my-5 pl-4">
             <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné

@@ -83,7 +83,7 @@ h1{
     -o-outline: none;
 }
 
-.sec1 .offres button.premium {
+.sec1 .offres button.premium, #button_Buy {
     background: linear-gradient(to right, #cb2d3e, #ef473a);
     box-shadow: 0px 0px 10px #ef473a;
     outline: none;
@@ -91,6 +91,18 @@ h1{
     -moz-outline: none;
     -ms-outline: none;
     -o-outline: none;
+    color: white;
+}
+
+div[class = "card border-dark mb-3"] {
+    width: 400px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+
+em[class = "far fa-question-circle"] {
+  cursor: help;
 }
 
 .sec1 .offres button.premium:hover {
@@ -276,7 +288,6 @@ h1{
 
 /*--Paiement modal--*/
 
-
 .triangle {
     width: 0px;
     height: 0px;
@@ -284,8 +295,9 @@ h1{
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     position: absolute;
-    right: -9px;
+    right: -24px;
 }
+
 #paiement-modal {
     top:10%;
     right:50%;
@@ -497,134 +509,168 @@ h1{
     transform: translateY(-7px);
 }
 
-#modalPaiement .modal-body form .form-group:first-child {
+#modalPaiement .modal-body form .form-group {
     position: relative;
 }
 
-/* bank card */
-#flip_card1, #flip_card2 {
-    background-color: transparent;
-    text-shadow: 0px 0px 7px white;
-    color: white;
-    cursor: pointer;
-}
-.form-group-card-back {
-    width: 25%;
-    position: relative;
-    left: 70%;
-    color: black;
-}
+/* premium box */
 
-#band {
+.pricing-table {
+    text-align: center;
+}
+/* Each pricing-item*/
+.pricing-item {
+    border-radius: 3px;
+    display: inline-block;
+    width: 260px;
+    height: 470px;
+    background: #fff;
+    margin: 20px;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    -webkit-transition: all 0.2s cubic-bezier(0.3, 0.6, 0.2, 1.8);
+    transition: all 0.2s cubic-bezier(0.3, 0.6, 0.2, 1.8);
+}
+.pricing-item:hover {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+.pricing-item .pricing-title {
     width: 100%;
-    height: 50px;
-    background-color: white;
+    color: white;
+    display: block;
+    position: relative;
+    background: #0074d9;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.pricing-item.pricing-featured .pricing-title {
+    background: #ff4136;
+}
+.pricing-item.pricing-featured .pricing-offres-title {
+    background: linear-gradient(to right, #4a00e0, #cb2d3e);
+}
+
+.pricing-item .pricing-offres-title {
+    width: 100%;
+    color: white;
+    display: block;
+    position: relative;
+    background: #232328;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* pricing-value */
+.pricing-value, .pricing-value-offres {
+    width: 180px;
+    height: 180px;
+    padding-top: 46px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 46px;
+    font-weight: 300;
+    margin: 10px auto;
+}
+.pricing-value .smallText, .pricing-value-offres .smallText{
+    font-size: 14px;
+}
+.pricing-value .undertext, .pricing-value-offres .undertext{
+    display: block;
+    font-size: 16px;
+}
+.pricing-item .pricing-value {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    box-shadow: 0px 0px 10px #4a00e0;
+    border: none;
+}
+.pricing-item.pricing-featured .pricing-value {
+    background: linear-gradient(to right, #cb2d3e, #ef473a);
+    box-shadow: 0px 0px 10px #ef473a;
     border: none;
 }
 
-
-#flip_card1 {
-    position: relative;
-    left: 10px;
+.pricing-item.pricing-featured .pricing-value-offres {
+    background: linear-gradient(to right, #8e2de2, #ef473a);
+    box-shadow: 0px 0px 10px #232328;
+    border: none;
+}
+/* List */
+.pricing-item .pricing-features {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+.pricing-item .pricing-features li {
+    display: block;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+.pricing-item .pricing-features li .keywords {
+    font-weight: bold;
 }
 
-#flip_card2 {
-    position: relative;
-    width: 0;
-    left: 50%;
+#buy_premium1:hover {
+    background: white;
+    color: #0074d9;
+    border: 2px solid #0074d9;
 }
 
-#flip_card2:hover, #flip_card1:hover {
-    text-shadow: 0px 0px 7px #ef473a;
-    color: #ef473a;
+#buy_premium2:hover {
+    background: white;
+    color: #ff4136;
+    border: 2px solid #ff4136;
 }
 
-
-.bank-card .form-group-card {
-    background-color: transparent;
+#buy_premium3:hover {
+    background: -webkit-linear-gradient( #8e2de2, #ef473a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid #ea468a;
 }
 
-.form-group-card input::placeholder, .form-group-card-end input::placeholder, .form-group-card-back input::placeholder,
- .form-group-card input, .form-group-card-end input,
- .form-group-card-back input {
-    font-size: 23px;
-}
-
-.line_card_title, .line_card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-}
-
-#input_number::placeholder {
-    font-size: 25px;
-}
-
-#name-card {
-    position: relative;
-    right: 15px;
-}
-
-.line_card_title {
-   align-items: center;
-}
-
-.line_card {
-    align-items: flex-end;
- }
-
-.bank-card {
-    background-color: transparent;
-    width: 80%;
-    height: 280px;
-    perspective: 1000px;
-    
-  }
-
-  .bank-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.selected {
+    z-index: 10;
+    width: 180px;
+    height: 32px;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 25px;
     text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .bank-card-front, .bank-card-back {
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px #888;
+    background: #232328;
+    border-top: 5px solid #232328;
+    border-bottom: 5px solid #232328;
+    transform: rotate(35deg);
     position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    
-  }
-  
-  .bank-card-front {
-    background-color: #bbb;
-    color: black;
-    background-image: url('./image-page-2/euro.png');
-    background-repeat: no-repeat;
-    background-size: 200px;
-    background-position: center;
-  }
-  
-  .bank-card-back {
-    background-color: #bbb;
-    color: white;
-    transform: rotateY(180deg);
-  }
-
-  #line_card_end {
-    align-items: flex-end;
-    
+    right: -47px;
+    top: 17px;
 }
-#line_card_end .form-group-card-end {
-    margin-top: 5px;
- }
-/* end bank card */
+
+#buy_premium1, #buy_premium2, #buy_premium3 {
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+/* end premium box */
+
+/* buy NP box */
+
+
+/* end uy NP box */
 
 
 
