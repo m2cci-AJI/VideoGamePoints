@@ -241,7 +241,7 @@ section[class ="sec1 text-white mt-5"] a{
 #paiement-modal {
     top:10%;
     right:50%;
-    max-height:600px; 
+    max-height:750px; 
     overflow-y:auto;
 }
 
@@ -383,7 +383,7 @@ section[class ="sec1 text-white mt-5"] a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 #confirm_input p {
