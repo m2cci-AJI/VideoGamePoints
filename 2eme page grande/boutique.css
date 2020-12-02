@@ -607,10 +607,101 @@ section[class ="sec1 text-white mt-5"] a{
 }
 /* end premium box */
 
-/* buy NP box */
+/* Giveaway */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600");
 
+:not(#blah) ::selection {
+    color: white !important;
+    background-color: none !important;
+}
 
-/* end uy NP box */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url("#goo");
+}
+
+.button {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    background: linear-gradient(45deg, #c22525, #D7388A, #3B579D, #23B2F3);
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: 0px 0px 8px #fff;
+
+}
+
+.social {
+    opacity: 0;
+    position: relative;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: inline-block;
+    color: #FFF;
+    font-size: 70px;
+    text-align: center;
+}
+
+.social i {
+    margin-top: 10px;
+}
+
+.social a {
+    color: #FFF;
+}
+
+.twitter {
+    background: #00aced;
+    margin-top: 85px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.facebook {
+    background: #3b5998;
+    margin-top: 85px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.instagram {
+    display: inline-block;
+    text-align: center;
+    border-radius: 40px;
+    color: #fff;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+    margin-top: 85px;
+}
+
+.youtube {
+    background: #bb0000;
+    margin-top: 85px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.clicked {
+    opacity: 1;
+    transition: 1.2s all ease;
+    transform: translateY(56px);
+}
+
+/* end Giveaway */
 
 
 
