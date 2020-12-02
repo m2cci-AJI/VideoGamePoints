@@ -183,7 +183,10 @@ em[class = "far fa-question-circle"] {
     border-radius: 10px;
 }
 
-
+section[class ="sec1 text-white mt-5"] a{
+    text-decoration: none !important;
+    color: inherit;
+}
 
 /*--FIN SECTION 1--*/
 
@@ -197,33 +200,6 @@ em[class = "far fa-question-circle"] {
     text-align: center;
 }
 
-#premium-modal .modal-content,
-#buy-modal .modal-content {
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: #232328;
-}
-
-#buy-modal .modal-content {
-    max-width: 350px;
-}
-
-#premium-modal .color-bar {
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(to right, #cb2d3e, #ef473a);
-    
-}
-
-#buy-modal .color-bar {
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-}
-
-#buy-modal .btn {
-    background: linear-gradient(to right, #8e2de2, #4a00e0) !important;
-}
 
 .modal .divider {
     width: 90%;
@@ -231,48 +207,12 @@ em[class = "far fa-question-circle"] {
     background-color: white;
 }
 
-#buy-modal .modal-content {
-    max-width: 350px;
-    margin: 20px 0;
-}
-
-@media (max-width: 1220px) {
-    #buy-modal .modal-content {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 850px) {
-    #buy-modal .modal-dialog {
-        margin-top: 100px;
-    }
-}
-
-@media (min-width: 751px) {
-    #premium-modal .modal-dialog {
-        max-width: 1000px !important;
-        justify-content: center;
-    }
-
-    #buy-modal .modal-dialog {
-        max-width: 1500px !important;
-        justify-content: center;
-        align-content: center;
-    }
-}
 
 @media (max-width: 750px) {
     .modal.show .modal-dialog {
         flex-direction: column;
         justify-content: center;
         width: 100%;
-    }
-
-    #premium-modal .modal-content {
-        border-radius: 5px;
-        overflow: hidden;
-        background-color: #232328;
-        margin: 10px 0;
     }
 }
 
@@ -634,7 +574,7 @@ em[class = "far fa-question-circle"] {
 }
 
 #buy_premium3:hover {
-    background: -webkit-linear-gradient( #8e2de2, #ef473a);
+    background: -webkit-linear-gradient(#8e2de2, #ef473a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 3px solid #ea468a;

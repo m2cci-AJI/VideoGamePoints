@@ -54,118 +54,12 @@
     <section class="sec1 text-white mt-5">
         <h1 class="text-center">C'est ici que vous gagnez vos NP</h1>
         <div class="offres mt-5 text-center">
-            <button class="premium px-5 my-3 mx-3" data-toggle="modal" data-target="#premium-modal">
-                PREMIUM<br>2.99€ / Mois
+            <button class="premium px-5 my-3 mx-3">
+                <a href="#premium_object">PREMIUM<br>2.99€ / Mois</a>
             </button>
-            <button class="buy-np px-5 my-3 mx-3" data-toggle="modal" data-target="#buy-modal">
-                ACHETER<br>DES NP
+            <button class="buy-np px-5 my-3 mx-3">
+                <a href="#buy_object">ACHETER<br>DES NP</a>
             </button>
-        </div>
-
-        <!-- PREMIUM Modal -->
-        <div class="modal fade" id="premium-modal" tabindex="-1" aria-labelledby="premium-modalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content mx-4">
-                    <div class="color-bar"></div>
-                    <div class="mx-4">
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <h1 class="text-white">BASIQUE</h1>
-                        </div>
-                    </div>
-                    <div class="divider mx-auto"></div>
-                    <div class="modal-body">
-                        <br>
-                        <h1 class="text-center" id="premiumbuycombien">2,99€/mois</h1><br>
-                        <h4> - 200 NP gratuit tous les mois</h4>
-                        <h4> - ** pubs tous les * heures</h4>
-                        <h4> - Reponce du support plus rapide</h4>
-                        <h4> - 2 semaine d'essais</h4><br>
-                        <div class="d-flex justify-content-center my-4">
-                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
-                                data-target="#paiement-modal"></i>Acheter</button>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="a-changer">
-                            <label class="form-check-label" for="a-changer">condition</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-content mx-4">
-                    <div class="color-bar"></div>
-                    <div class="mx-4">
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <h1 class="text-white">SUPER</h1>
-                        </div>
-                    </div>
-                    <div class="divider mx-auto"></div>
-                    <div class="modal-body">
-                        <br>
-                        <h1 class="text-center" id="premiumbuycombien">4,99€/mois</h1><br>
-                        <h4> - 400 NP gratuit tous les mois</h4>
-                        <h4> - ** pubs tous les * heures</h4>
-                        <h4> - Reponce du support plus rapide</h4>
-                        <h4> - 200 NP offert apres 6 mois</h4><br>
-                        <div class="d-flex justify-content-center my-4">
-                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
-                                data-target="#paiement-modal"></i>Acheter</button>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="a-changer">
-                            <label class="form-check-label" for="a-changer">Condition</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- BUY Modal -->
-        <div class="modal fade" id="buy-modal" tabindex="-1" aria-labelledby="buy-modalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered flex-wrap">
-                <div class="modal-content mx-4 text-center">
-                    <div class="color-bar"></div>
-                    <h1 class="text-white">** NP</h1>
-                    <div class="modal-body">
-                        <h1 class="text-center" id="premiumbuycombien">4,99€</h1><br>
-                        <div class="d-flex justify-content-center my-4">
-                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
-                                data-target="#paiement-modal"></i>Acheter</button>
-                        </div>
-                        <div class="form-group form-check text-left">
-                            <input type="checkbox" class="form-check-input" id="a-changer">
-                            <label class="form-check-label" for="a-changer">Condition</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-content mx-4 text-center">
-                    <div class="color-bar"></div>
-                    <h1 class="text-white">** NP</h1>
-                    <div class="modal-body">
-                        <h1 class="text-center" id="premiumbuycombien">4,99€</h1><br>
-                        <div class="d-flex justify-content-center my-4">
-                            <button type="submit" class="btn w-50 text-white" data-toggle="modal"
-                                data-target="#paiement-modal"></i>Acheter</button>
-                        </div>
-                        <div class="form-group form-check text-left">
-                            <input type="checkbox" class="form-check-input" id="a-changer">
-                            <label class="form-check-label" for="a-changer">Condition</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-content mx-4 text-center">
-                    <div class="color-bar"></div>
-                    <h1 class="text-white">** NP</h1>
-                    <div class="modal-body">
-                        <h1 class="text-center" id="premiumbuycombien">4,99€</h1><br>
-                        <div class="d-flex justify-content-center my-4">
-                            <button type="submit" class="btn w-50 text-white"></i>Acheter</button>
-                        </div>
-                        <div class="form-group form-check text-left">
-                            <input type="checkbox" class="form-check-input" id="a-changer">
-                            <label class="form-check-label" for="a-changer">Condition.</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Paiement Modal -->
@@ -680,87 +574,89 @@
                 $(".instruction").toggleClass("clicked");
             });
         </script>
-        <h2 style="text-align: center;color: white;">Choisissez votre forfait Premium</h2>
-        <br>
-        <h5 style="text-align: center;color: white;">Avec nos critiques incroyables et notre garantie de remboursement,
-            qu'attendez-vous?</h5>
-        <br>
-        <br>
-        <div class="pricing-table">
-            <div class="pricing-item">
-                <div class="pricing-title">
-                    BASIQUE
+        <a id="premium_object">
+            <h2 style="text-align: center;color: white;">Choisissez votre forfait Premium</h2>
+            <br>
+            <h5 style="text-align: center;color: white;">Avec notre engagement et notre garantie de remboursement,
+                qu'attendez-vous?</h5>
+            <br>
+            <br>
+            <div class="pricing-table">
+                <div class="pricing-item">
+                    <div class="pricing-title">
+                        BASIQUE
+                    </div>
+                    <div class="pricing-value">€2<span class="smallText">.99</span>
+                        <span class="undertext">/Mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="keywords">200 NP</span> gratuits tous les mois</li>
+                        <li><span class="keywords">2 publicités</span> tous les heures</li>
+                        <li> Réponse du support plus rapide</li>
+                        <li><span class="keywords">2 semaines</span> d'essai gratuites</li>
+                    </ul>
+                    <div class="button" id="buy_premium1" data-toggle="modal" data-target="#paiement-modal">Acheter
+                    </div>
                 </div>
-                <div class="pricing-value">€2<span class="smallText">.99</span>
-                    <span class="undertext">/Mois</span>
+                <div class="pricing-item pricing-featured">
+                    <div class='selected'>Recommandé</div>
+                    <div class="pricing-title">
+                        SUPER
+                    </div>
+                    <div class="pricing-value">€4.<span class="smallText">.99</span>
+                        <span class="undertext">/Mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="keywords">400 NP</span> gratuits tous les mois</li>
+                        <li><span class="keywords">6 publicités</span> tous les heures</li>
+                        <li> Réponse du support plus rapide</li>
+                        <li><span class="keywords">200 NP</span> offerts après 6 mois</li>
+                    </ul>
+                    <div class="button" id="buy_premium2" data-toggle="modal" data-target="#paiement-modal">Acheter
+                    </div>
                 </div>
-                <ul class="pricing-features">
-                    <li><span class="keywords">200 NP</span> gratuits tous les mois</li>
-                    <li><span class="keywords">2 publicités</span> tous les heures</li>
-                    <li> Réponse du support plus rapide</li>
-                    <li><span class="keywords">2 semaines</span> d'essai gratuites</li>
-                </ul>
-                <div class="button" id="buy_premium1" data-toggle="modal"
-                data-target="#paiement-modal">Acheter</div>
             </div>
-            <div class="pricing-item pricing-featured">
-                <div class='selected'>Recommandé</div>
-                <div class="pricing-title">
-                    SUPER
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a id="buy_object">
+            <h2 style="text-align: center;color: white;">Achetez vos points NP</h2>
+            <br>
+            <h5 style="text-align: center;color: white;">Ici, vous Profitez de nos meilleurs prix !</h5>
+            <br>
+            <br>
+            <div class="pricing-table">
+                <div class="pricing-item pricing-featured">
+                    <div class="pricing-offres-title">
+                        OFFRES
+                    </div>
+                    <div class="pricing-value-offres">€4.<span class="smallText">.99</span>
+                        <span class="undertext">/Mois</span>
+                    </div>
+                    <br>
+                    <span class="keywords"><strong>Sélectionnez le nombre de NP à
+                            acheter</strong></span>
+                    <br>
+                    <br>
+                    <div class="input-group mb-2" style="width: 80%; position: relative; left: 10%;">
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option value="20">20 NP</option>
+                            <option value="40">40 NP</option>
+                            <option value="60">60 NP</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="button" id="buy_premium3" data-toggle="modal" data-target="#paiement-modal">Acheter
+                    </div>
                 </div>
-                <div class="pricing-value">€4.<span class="smallText">.99</span>
-                    <span class="undertext">/Mois</span>
-                </div>
-                <ul class="pricing-features">
-                    <li><span class="keywords">400 NP</span> gratuits tous les mois</li>
-                    <li><span class="keywords">6 publicités</span> tous les heures</li>
-                    <li> Réponse du support plus rapide</li>
-                    <li><span class="keywords">200 NP</span> offerts après 6 mois</li>
-                </ul>
-                <div class="button" id="buy_premium2" data-toggle="modal"
-                data-target="#paiement-modal">Acheter</div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2 style="text-align: center;color: white;">Achetez vos points NP</h2>
-        <br>
-        <h5 style="text-align: center;color: white;">Avec nos critiques incroyables et notre garantie de remboursement,
-            qu'attendez-vous?</h5>
-        <br>
-        <br>
-        <div class="pricing-table">
-            <div class="pricing-item pricing-featured">
-                <div class="pricing-offres-title">
-                    OFFRES
-                </div>
-                <div class="pricing-value-offres">€4.<span class="smallText">.99</span>
-                    <span class="undertext">/Mois</span>
-                </div>
-                <br>
-                <span class="keywords"><strong>Sélectionnez le nombre de NP à
-                        acheter</strong></span>
-                <br>
-                <br>
-                <div class="input-group mb-2" style="width: 80%; position: relative; left: 10%;">
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option value="20">20 NP</option>
-                        <option value="40">40 NP</option>
-                        <option value="60">60 NP</option>
-                    </select>
-                </div>
-                <br>
-                <div class="button" id="buy_premium3" data-toggle="modal"
-                data-target="#paiement-modal">Acheter</div>
-            </div>
-        </div>
-
+        </a>
         <div class="intro mx-auto my-5 pl-4">
             <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné
                 dans une des photos ou vidéos.</h2>
