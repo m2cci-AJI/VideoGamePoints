@@ -173,13 +173,13 @@
                 <div class="modal-content" style="width: 100%">
                     <div class="modal-body">
                         <h4 id="title_paypal"> Paiement par Carte de crédit</h4>
-                        <p>Frais de transaction <span>0.00 €</span></p>
+                        <p>Frais de transaction <span>0.00 </span> <span class = "logo_money">€</span></p>
                         <br>
                         <img src="./image-page-2/stripe_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
                         <div class="paiement_method">
-                            <h4>Payez 4.99 € par carte</h4>
+                            <h4>Payez <span>4.99 </span> <span class = "logo_money">€ </span> par carte</h4>
                         </div>
                         <br>
                     </div>
@@ -189,13 +189,13 @@
                 <div class="modal-content" style="width: 100%">
                     <div class="modal-body">
                         <h4 id="title_paypal"> Paiement par PayPal</h4>
-                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <p>Frais de transaction <span>1.09 </span> <span class = "logo_money">€</span></p>
                         <br>
                         <img src="./image-page-2/payPal_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
                         <div class="paiement_method">
-                            <h4>Payez Par PayPal</h4>
+                            <h4>Payez <span>4.99 </span> <span class = "logo_money">€ </span> Par PayPal</h4>
                         </div>
                         <br>
                     </div>
@@ -205,13 +205,13 @@
                 <div class="modal-content" style="width: 100%">
                     <div class="modal-body">
                         <h4 id="title_paypal"> Paiement par Crypto-monnaies</h4>
-                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <p>Frais de transaction <span>1.09 </span> <span class = "logo_money">€</span></p>
                         <br>
                         <img src="./image-page-2/crypto_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
                         <div class="paiement_method">
-                            <h4>Payez Par Crypto</h4>
+                            <h4>Payez <span>4.99 </span> <span class = "logo_money">€ </span> Par Crypto</h4>
                         </div>
                         <br>
                     </div>
@@ -221,11 +221,11 @@
                 <div class="modal-content" style="width: 100%">
                     <div class="modal-body">
                         <h4 id="title_paypal"> Paiement par GooglePay</h4>
-                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <p>Frais de transaction <span>1.09 </span> <span class = "logo_money">€</span></p>
                         <img src="./image-page-2/googlePay_card.png" class="img-fluid" style="height: 150px;" alt="">
                         <br>
                         <div class="paiement_method">
-                            <h4>Payez Par GooglePay</h4>
+                            <h4>Payez <span>4.99 </span> <span class = "logo_money">€ </span> Par GooglePay</h4>
                         </div>
                         <br>
                     </div>
@@ -235,13 +235,13 @@
                 <div class="modal-content" style="width: 100%">
                     <div class="modal-body">
                         <h4 id="title_paypal"> Paiement par AmazonPay</h4>
-                        <p>Frais de transaction <span>1.09 €</span></p>
+                        <p>Frais de transaction <span>1.09 </span> <span class = "logo_money">€</span></p>
                         <br>
                         <img src="./image-page-2/amazon_card.png" class="img-fluid" style="height: 100px;" alt="">
                         <br>
                         <br>
                         <div class="paiement_method">
-                            <h4>Payez Par AmazonPay</h4>
+                            <h4>Payez <span>4.99 </span> <span class = "logo_money">€ </span> Par AmazonPay</h4>
                         </div>
                         <br>
                     </div>
@@ -262,24 +262,6 @@
                     }
                 }
             })
-        </script>
-        <script>
-            let select_elem = document.getElementById('paiement-modal').getElementsByTagName('select')[0];
-            console.log('select_elem', select_elem);
-            let bank_card_front = document.getElementsByClassName('bank-card-front')[0];
-            select_elem.addEventListener('change', () => {
-                if (select_elem.value === "dollar") {
-                    bank_card_front.style.backgroundImage = "url('./image-page-2/dollar.png')";
-                    bank_card_front.style.backgroundRepeat = "no-repeat";
-                    bank_card_front.style.backgroundSize = "200px";
-                    bank_card_front.style.backgroundPosition = "center";
-                } else {
-                    bank_card_front.style.backgroundImage = "url('./image-page-2/euro.png')";
-                    bank_card_front.style.backgroundRepeat = "no-repeat";
-                    bank_card_front.style.backgroundSize = "250px";
-                    bank_card_front.style.backgroundPosition = "center";
-                }
-            });
         </script>
         <script>
             let button_plus = document.getElementById('button_plus');
@@ -488,7 +470,7 @@
                     <div class="pricing-title">
                         BASIQUE
                     </div>
-                    <div class="pricing-value">€2<span class="smallText">.99</span>
+                    <div class="pricing-value">€2<span class="smallText">99</span>
                         <span class="undertext">/Mois</span>
                     </div>
                     <ul class="pricing-features">
@@ -505,7 +487,7 @@
                     <div class="pricing-title">
                         SUPER
                     </div>
-                    <div class="pricing-value">€4.<span class="smallText">.99</span>
+                    <div class="pricing-value">€4.<span class="smallText">99</span>
                         <span class="undertext">/Mois</span>
                     </div>
                     <ul class="pricing-features">
@@ -538,7 +520,7 @@
                     <div class="pricing-offres-title">
                         OFFRES
                     </div>
-                    <div class="pricing-value-offres">€4.<span class="smallText">.99</span>
+                    <div class="pricing-value-offres">€4.<span class="smallText">99</span>
                     </div>
                     <br>
                     <span class="keywords"><strong>Sélectionnez le nombre de NP à
@@ -559,18 +541,33 @@
             </div>
         </a>
         <script>
-            let pricing_table = document.getElementsByClassName('pricing-table')[1].getElementsByTagName('select')[0];
+            let pricing_table_select = document.getElementsByTagName('select')[1];
             let price = document.getElementsByClassName('pricing-value-offres')[0];
-            pricing_table.addEventListener('change', () => {
-                console.log(pricing_table.value);
-                if (pricing_table.value === "20") {
-                    price.innerHTML = "€4.<span class='smallText'>.99";
-                } else if (pricing_table.value === "40") {
-                    price.innerHTML = "€6.<span class='smallText'>.99";
-                } else if (pricing_table.value === "60") {
-                    price.innerHTML = "€8.<span class='smallText'>.99";
+            pricing_table_select.addEventListener('change', () => {
+                if (pricing_table_select.value === "20") {
+                    price.innerHTML = "€4.<span class='smallText'>99";
+                } else if (pricing_table_select.value === "40") {
+                    price.innerHTML = "€6.<span class='smallText'>99";
+                } else if (pricing_table_select.value === "60") {
+                    price.innerHTML = "€8.<span class='smallText'>99";
                 }
             })
+        </script>
+        
+        <script>
+            let select_money = document.getElementsByTagName('select')[0];
+            let logo_money = document.getElementsByClassName('logo_money');
+            select_money.addEventListener('change', () => {
+                if(select_money.value === "euro") {
+                    for(let i = 0; i < logo_money.length; i++) {
+                        logo_money[i].textContent = "€";
+                    }
+                } else {
+                    for(let i = 0; i < logo_money.length; i++) {
+                        logo_money[i].textContent = "$";
+                    }
+                }
+            });
         </script>
         <div class="intro mx-auto my-5 pl-4">
             <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné
