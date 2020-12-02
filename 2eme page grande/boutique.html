@@ -637,7 +637,6 @@
                         OFFRES
                     </div>
                     <div class="pricing-value-offres">€4.<span class="smallText">.99</span>
-                        <span class="undertext">/Mois</span>
                     </div>
                     <br>
                     <span class="keywords"><strong>Sélectionnez le nombre de NP à
@@ -657,6 +656,20 @@
                 </div>
             </div>
         </a>
+        <script>
+            let pricing_table = document.getElementsByClassName('pricing-table')[1].getElementsByTagName('select')[0];
+            let price = document.getElementsByClassName('pricing-value-offres')[0];
+            pricing_table.addEventListener('change', () => {
+                console.log(pricing_table.value);
+                if (pricing_table.value === "20") {
+                    price.innerHTML = "€4.<span class='smallText'>.99";
+                } else if (pricing_table.value === "40") {
+                    price.innerHTML = "€6.<span class='smallText'>.99";
+                } else if (pricing_table.value === "60") {
+                    price.innerHTML = "€8.<span class='smallText'>.99";
+                }
+            } )
+        </script>
         <div class="intro mx-auto my-5 pl-4">
             <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné
                 dans une des photos ou vidéos.</h2>
