@@ -12,238 +12,74 @@ body {
     background-color: #04011d;
 }
 
-h2{
-    font-weight: bold
-}
-h1{
-    font-weight: bold;
-    margin-top: -150px;
-}
-
-
-#deco {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  #deco::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translateX(-50%) scaleX(0);
-            transform: translateX(-50%) scaleX(0);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.8);
-    -webkit-transition: -webkit-transform 250ms;
-    transition: -webkit-transform 250ms;
-    transition: transform 250ms;
-    transition: transform 250ms, -webkit-transform 250ms;
-  }
-  #deco:hover::after {
-    -webkit-transform: translateX(-50%) scaleX(1);
-            transform: translateX(-50%) scaleX(1);
-  }
-
-/*--INSCRIPTIONPWD--*/
-
-
-.invalidorvalid{
-    box-shadow: 0 0 5px 1px red;
-}
-
-.invalidorvalid:valid {
-    box-shadow: 0 0 5px 1px green;
-}
-
-/*--INSCRIPTIONPWD end--*/
-
-
-/*--SECTION 1--*/
 
 #titleshop{
     padding-top: 160px;
 }
+  
+body{
+    background: #04011d;
+}
 
-.sec2{
+.container1{
+    padding-right: 40px;
+}
+.container2{
+    padding-left: 40px;
+}
+
+.card{
+    height: 390px;
+    width: 300px;
+    background-color: #0E0E0E;
+    background-image: url("imglol.png");
+    border-radius: 30px;
     display: flex;
-    padding-left: 420px;
+    justify-content: center;
+    align-items: flex-end;
+    transform-style: preserve-3d;
+}
+
+#photo{
+    height: 70px;
+    font-size: 5em;
+    color: #fff;
+    transition: 1s;
+}
+
+.card:hover #photo{
+    transform: translateZ(100px);
+}
+
+.card2{
+    height: 390px;
+    width: 300px;
+    background-color: #0E0E0E;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-  
-#container {
-    perspective: 30px;
-}
-  
-#inner {
-    transition: transform 0.5s;
-    -webkit-transition: transform 0.5s;
-    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
-}
-#containerr {
-    perspective: 30px;
-}
-  
-#innerr {
-    transition: transform 0.5s;
-    -webkit-transition: transform 0.5s;
-    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
-}
-  
-  /*============================================================
-   * EXTRAS
-   *============================================================*/
-  
-.demo-img {
-    border: solid rgb(36, 35, 35) 1px;
-    background-image: url("imglol.jpg");
-    background-repeat: no-repeat;
-}
-.demo-img2 {
-    border: solid rgb(36, 35, 35) 1px;
-    background-image: url("logo_paysafecard.png");
-    background-repeat: no-repeat;
-}
-  
-#container:hover .demo-overlay {
-    opacity: 1;
-}
-  
-#container:hover {
-    cursor: pointer;
-}
-#containerr:hover .demo-overlay {
-    opacity: 1;
-}
-  
-#containerr:hover {
-    cursor: pointer;
-}
-  
-.demo-overlay {
-    width: 18em;
-    padding: 10em 0;
-    opacity: 0;
-    background-color: rgba(173, 173, 173, 0.192);
-    transition: opacity 0.4s;
-}
-  
-.demo-overlay svg {
-    display: block;
-    margin: 0 auto;
-    fill: white;
-}
-@media (max-width: 1980px){
-    .sec2 {
-        padding-left: 620px;
-    }
-}
-@media (max-width: 1700px){
-    .sec2 {
-        padding-left: 480px;
-    }
-}
-@media (max-width: 1600px){
-    .sec2 {
-        padding-left: 430px;
-    }
-}
-@media (max-width: 1500px){
-    .sec2 {
-        padding-left: 380px;
-    }
-}
-@media (max-width: 1400px){
-    .sec2 {
-        padding-left: 340px;
-    }
-}
-@media (max-width: 1300px){
-    .sec2 {
-        padding-left: 300px;
-    }
-}
-@media (max-width: 1270px){
-    .sec2 {
-        padding-left: 270px;
-    }
-}
-@media (max-width: 1220px){
-    .sec2 {
-        padding-left: 250px;
-    }
-}
-@media (max-width: 1100px){
-    .sec2 {
-        padding-left: 200px;
-    }
-}
-@media (max-width: 990px){
-    .sec2 {
-        padding-left: 100px;
-    }
-}
-@media (max-width: 850px){
-    .sec2 {
-        padding-left: 50px;
-    }
-}
-@media (max-width: 750px) {
-    .sec2 {
-        padding-left: 0px;
-    }
-}
-@media (max-width: 650px) {
-    .sec2 {
-        padding-left: 0px;
-    }
-}
-@media (max-width: 470px) {
-    .demo-img {
-        width: 13em;
-        background-position: center;
-    }
-}
-@media (max-width: 470px) {
-    .demo-img2 {
-        width: 14em;
-        background-position: center;
-        margin-left: -93px;
-    }
-}
-@media (max-width: 470px) {
-    .demo-overlay {
-        width: 13em;
-        background-position: center;
-    }
-}
-@media (max-width: 300px) {
-    .demo-img {
-        width: 11em;
-        background-position: center;
-    }
-}
-@media (max-width: 300px) {
-    .demo-img2 {
-        width: 11em;
-        background-position: center;
-        margin-left: -93px;
-    }
-}
-@media (max-width: 300px) {
-    .demo-overlay {
-        width: 11em;
-        background-position: center;
-    }
+    transform-style: preserve-3d;
 }
 
-
-/*--SECTION 1 end--*/
-
-.opacity-unlock {
-    opacity: 0.1;
+#photo2{
+    height: 120px;
+    font-size: 5em;
+    color: #fff;
+    transition: 1s;
 }
+
+.card2:hover #photo2{
+    transform: translateZ(100px);
+}
+
+.container_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container1 {
+    max-width: 500px !important;
+}
+

@@ -1,92 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
-    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../header-footer/header.css">
-    <link rel="stylesheet" href="../header-footer/footer.css">
-    <link rel="stylesheet" href="page4.css">
-    <script> 
-        $(function(){
-          $("#header").load("../header-footer/header.html"); 
-          $("#footer").load("../header-footer/footer.html"); 
-        });
-    </script> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="../header-footer/header.css">
+  <link rel="stylesheet" href="../header-footer/footer.css">
+  <link rel="stylesheet" href="page4.css">
+  <script>
+    $(function () {
+      $("#header").load("../header-footer/header.html");
+      $("#footer").load("../header-footer/footer.html");
+    });
+  </script>
 </head>
+
 <body>
-    <header id = "header"> </header>
-    <script id="rendered-js" >
-        function createRipple(event) {
-          const button = event.currentTarget;
-        
-          const circle = document.createElement("span");
-          const diameter = Math.max(button.clientWidth, button.clientHeight);
-          const radius = diameter / 2;
-        
-          circle.style.width = circle.style.height = `${diameter}px`;
-          circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-          circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-          circle.classList.add("ripple");
-        
-          const ripple = button.getElementsByClassName("ripple")[0];
-        
-          if (ripple) {
-            ripple.remove();
-          }
-        
-          button.appendChild(circle);
-        }
-        
-        const buttons = document.getElementsByTagName("button");
-        for (const button of buttons) {
-          button.addEventListener("click", createRipple);
-        }
-    </script>
+  <header id="header"> </header>
+  <script id="rendered-js">
+    function createRipple(event) {
+      const button = event.currentTarget;
+
+      const circle = document.createElement("span");
+      const diameter = Math.max(button.clientWidth, button.clientHeight);
+      const radius = diameter / 2;
+
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+      circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+      circle.classList.add("ripple");
+
+      const ripple = button.getElementsByClassName("ripple")[0];
+
+      if (ripple) {
+        ripple.remove();
+      }
+
+      button.appendChild(circle);
+    }
+
+    const buttons = document.getElementsByTagName("button");
+    for (const button of buttons) {
+      button.addEventListener("click", createRipple);
+    }
+  </script>
 
 
-    <div class="title text-center text-white mb-5">
-        <h1 id="titleshop">Shop</h1>
+  <div class="title text-center text-white mb-5">
+    <h1 id="titleshop">Shop</h1>
+  </div>
+
+  <div class="container_cards">
+    <div class="container1">
+      <div class="card">
+        <img id="photo" src="lol.png" alt="">
+      </div>
+
+      <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+      <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+          max: 25,
+          speed: 2500,
+          scale: 1.1,
+        });
+      </script>
     </div>
 
 
-    <section class="sec2">
-        <div id="container" class="mr-5">
-            <div id="inner">
-              <div class="demo-img">
-                <a href="../lol/pagelol.html">
-                    <div class="demo-overlay">
-                        <svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 612 612" xml:space="preserve">
-                        </svg>
-                    </div>
-                </a>
-              </div>
-            </div>
-        </div>
-        <script src="img.js"></script>
-        <div id="containerr" class="ml-5">
-            <div id="innerr">
-              <div class="demo-img2">
-                <a href="../psc/pagepsc.html">
-                    <div class="demo-overlay">
-                        <svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 612 612" xml:space="preserve">
-                        </svg>
-                    </div>
-                </a>
-              </div>
-            </div>
-        </div>
-        <script src="imgpsc.js"></script>
-    </section>
-	
-	<br>
-    
-    <footer id = "footer" class="mt-5"> </footer>
+    <div class="container2">
+      <div class="card2">
+        <img id="photo2" src="logo_paysafecard.jpg" alt="">
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+      <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card2"), {
+          max: 25,
+          speed: 2500,
+          scale: 1.1,
+        });
+      </script>
+    </div>
+
+  </div>
+
+
+  <footer id="footer" class="mt-5"> </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
