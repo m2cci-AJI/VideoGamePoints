@@ -232,10 +232,11 @@ section[class ="sec1 text-white mt-5"] a{
 
 .pricing-table {
     text-align: center;
+   
 }
 /* Each pricing-item*/
 .pricing-item {
-    border-radius: 3px;
+    border-radius: 10px;
     display: inline-block;
     width: 260px;
     height: 470px;
@@ -259,7 +260,7 @@ section[class ="sec1 text-white mt-5"] a{
     color: white;
     display: block;
     position: relative;
-    background: #0074d9;
+    background: #ff4136;
     padding: 7px;
     font-weight: bold;
     font-size: 20px;
@@ -268,7 +269,7 @@ section[class ="sec1 text-white mt-5"] a{
     background: #ff4136;
 }
 .pricing-item.pricing-featured .pricing-offres-title {
-    background: linear-gradient(to right, #4a00e0, #cb2d3e);
+    background: #4a00e0;
 }
 
 .pricing-item .pricing-offres-title {
@@ -301,8 +302,8 @@ section[class ="sec1 text-white mt-5"] a{
     font-size: 16px;
 }
 .pricing-item .pricing-value {
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
-    box-shadow: 0px 0px 10px #4a00e0;
+    background: linear-gradient(to right, #cb2d3e, #ef473a);
+    box-shadow: 0px 0px 10px #ef473a;
     border: none;
 }
 .pricing-item.pricing-featured .pricing-value {
@@ -312,8 +313,8 @@ section[class ="sec1 text-white mt-5"] a{
 }
 
 .pricing-item.pricing-featured .pricing-value-offres {
-    background: linear-gradient(to right, #8e2de2, #ef473a);
-    box-shadow: 0px 0px 10px #232328;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    box-shadow: 0px 0px 10px #4a00e0;
     border: none;
 }
 /* List */
@@ -338,8 +339,8 @@ section[class ="sec1 text-white mt-5"] a{
 
 #buy_premium1:hover {
     background: white;
-    color: #0074d9;
-    border: 2px solid #0074d9;
+    color: #ff4136;
+    border: 2px solid #ff4136;
 }
 
 #buy_premium2:hover {
@@ -349,10 +350,9 @@ section[class ="sec1 text-white mt-5"] a{
 }
 
 #buy_premium3:hover {
-    background: -webkit-linear-gradient(#8e2de2, #ef473a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: 3px solid #ea468a;
+    background: white;
+    color: #0074d9;
+    border: 2px solid #0074d9;
 }
 
 .selected {
