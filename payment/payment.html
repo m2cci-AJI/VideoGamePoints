@@ -82,13 +82,6 @@ aria-hidden="true">
                     <h3>Plus ...</h3>
                 </div>
                 <br>
-                <h6>Monnaie de paiement</h6>
-                <select id="monnaies" name="monnaies">
-                    <option value="euro">Euro (€)</option>
-                    <option value="dollar">Dollar ($)</option>
-                </select>
-                <br>
-                <br>
                 <div id="confirm_input">
                     <div class="custom-control custom-checkbox custom-checkbox-green">
                         <input type="checkbox" class="custom-control-input custom-control-input-black"
@@ -289,18 +282,4 @@ aria-hidden="true">
             }
         }
     });
-  
-            let select_money = document.getElementsByTagName('select')[0];
-            let logo_money = document.getElementsByClassName('logo_money');
-            select_money.addEventListener('change', () => {
-                if (select_money.value === "euro") {
-                    for (let i = 0; i < logo_money.length; i++) {
-                        logo_money[i].textContent = "€";
-                    }
-                } else {
-                    for (let i = 0; i < logo_money.length; i++) {
-                        logo_money[i].textContent = "$";
-                    }
-                }
-            });       
 </script>
