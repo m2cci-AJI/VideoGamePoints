@@ -145,9 +145,10 @@
     width: 50%;
     font-size: larger;
     text-align: center;
-    cursor: not-allowed;
     border-radius: 5px;
 }
+
+
 
 #confirm_input {
     display: flex;
