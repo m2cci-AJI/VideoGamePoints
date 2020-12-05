@@ -100,7 +100,7 @@
 }
 
 #paiement-modal .form-group:hover {
-    background-color: #888888;
+    background-color: #888888 !important;
 }
 
 #button_plus {
