@@ -1,215 +1,239 @@
+<div class="modal fade" id="paiement-modal" tabindex="-1" aria-labelledby="paiement-modalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modalPaiement" style="max-width: 45%;">
+        <div class="modal-content" style="width: 100%">
+            <div id="modal_head1" class="modal-header"></div>
+            <h1 class="modal-title" id="premiumbuycombien">Paiement</h1>
+            <button type="button" id="close_modal1" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <hr>
+            <div class="modal-body">
+                <h4><em class="fas fa-search-dollar fa-lg"></em> Détails de paiement</h4>
+                <br>
+                <p> <em class="fas fa-info-circle"></em> Veuillez choisir le mode de paiement qui vous convient
+                    pour finaliser votre
+                    achat.</p>
+                <form>
+                    <div class="form-group">
+                        <img src="./image-page-2/master_card.png" class="img-fluid"
+                            style="height: 30px; margin-left:10px;" alt=""> &nbsp;
+                        <img src="./image-page-2/visa_card.png" class="img-fluid" style="height: 30px;" alt="">
+                        &nbsp;
+                        <img src="./image-page-2/diners_card.png" class="img-fluid" style="height: 50px;" alt=""> &nbsp;
+                        <img src="./image-page-2/maestro_card.png" class="img-fluid" style="height: 40px;" alt="">
+                        &nbsp;
+                        <img src="./image-page-2/network_card.png" class="img-fluid" style="height: 50px;" alt="">
+                        &nbsp;
+                        <img src="./image-page-2/amex_card.png" class="img-fluid" style="height: 50px;" alt="">
+                        <div class="custom-control custom-checkbox custom-checkbox-green">
+                            <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1"></label>
+                        </div>
+                        <div class="triangle" style="display: none"></div>
+                        <div class="recommand">Recommandé</div>
+                    </div>
 
-<div class="modal fade" id="paiement-modal" tabindex="-1" aria-labelledby="paiement-modalLabel"
-aria-hidden="true">
-<div class="modal-dialog" id="modalPaiement" style="max-width: 45%;">
-    <div class="modal-content" style="width: 100%">
-        <div class="modal-header"></div>
-        <h1 class="modal-title" id="premiumbuycombien">Paiement</h1>
-        <button type="button" id="close_modal" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <hr>
-        <div class="modal-body">
-            <h4><em class="fas fa-search-dollar fa-lg"></em> Détails de paiement</h4>
-            <br>
-            <p> <em class="fas fa-info-circle"></em> Veuillez choisir le mode de paiement qui vous convient
-                pour finaliser votre
-                achat.</p>
-            <form>
-                <div class="form-group">
-                    <img src="./image-page-2/master_card.png" class="img-fluid"
-                        style="height: 30px; margin-left:10px;" alt=""> &nbsp;
-                    <img src="./image-page-2/visa_card.png" class="img-fluid" style="height: 30px;" alt="">
-                    &nbsp;
-                    <img src="./image-page-2/diners_card.png" class="img-fluid" style="height: 50px;"
-                        alt=""> &nbsp;
-                    <img src="./image-page-2/maestro_card.png" class="img-fluid" style="height: 40px;"
-                        alt=""> &nbsp;
-                    <img src="./image-page-2/network_card.png" class="img-fluid" style="height: 50px;"
-                        alt=""> &nbsp;
-                    <img src="./image-page-2/amex_card.png" class="img-fluid" style="height: 50px;" alt="">
-                    <div class="custom-control custom-checkbox custom-checkbox-green">
-                        <input type="checkbox" class="custom-control-input custom-control-input-green"
-                            id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1"></label>
+                    <div class="form-group">
+                        <img src="./image-page-2/payPal_card.png" style="height: 40px; margin-left:10px;" alt="">
+                        <div class="custom-control custom-checkbox custom-checkbox-green">
+                            <input type="checkbox" class="custom-control-input custom-control-input-green" name="check"
+                                id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2"></label>
+                        </div>
+                        <div class="triangle" style="display: none"></div>
                     </div>
-                    <div class="triangle" style="display: none"></div>
-                    <div class="recommand">Recommandé</div>
-                </div>
+                    <div class="form-group clicked_elem" style="display: none">
+                        <img src="./image-page-2/crypto_card.png" style="height: 40px; margin-left:10px;" alt="">
+                        <div class="custom-control custom-checkbox custom-checkbox-green">
+                            <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                id="customCheck3">
+                            <label class="custom-control-label" for="customCheck3" 2></label>
+                        </div>
+                        <div class="triangle" style="display: none"></div>
+                    </div>
+                    <div class="form-group clicked_elem" style="display: none">
+                        <img src="./image-page-2/googlePay_card.png" style="height: 40px; margin-left:10px;" alt="">
+                        <div class="custom-control custom-checkbox custom-checkbox-green">
+                            <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                id="customCheck4">
+                            <label class="custom-control-label" for="customCheck4"></label>
+                        </div>
+                        <div class="triangle" style="display: none"></div>
+                    </div>
+                    <div class="form-group clicked_elem" style="display: none">
+                        <img src="./image-page-2/amazon_card.png" style="height: 40px; margin-left:10px;" alt="">
+                        <div class="custom-control custom-checkbox custom-checkbox-green">
+                            <input type="checkbox" class="custom-control-input custom-control-input-green"
+                                id="customCheck5">
+                            <label class="custom-control-label" for="customCheck5"></label>
+                        </div>
+                        <div class="triangle" style="display: none"></div>
+                    </div>
 
-                <div class="form-group">
-                    <img src="./image-page-2/payPal_card.png" style="height: 40px; margin-left:10px;"
-                        alt="">
-                    <div class="custom-control custom-checkbox custom-checkbox-green">
-                        <input type="checkbox" class="custom-control-input custom-control-input-green"
-                            name="check" id="customCheck2">
-                        <label class="custom-control-label" for="customCheck2"></label>
+                    <div id="button_plus">
+                        <h3>Plus ...</h3>
                     </div>
-                    <div class="triangle" style="display: none"></div>
-                </div>
-                <div class="form-group clicked_elem" style="display: none">
-                    <img src="./image-page-2/crypto_card.png" style="height: 40px; margin-left:10px;"
-                        alt="">
-                    <div class="custom-control custom-checkbox custom-checkbox-green">
-                        <input type="checkbox" class="custom-control-input custom-control-input-green"
-                            id="customCheck3">
-                        <label class="custom-control-label" for="customCheck3" 2></label>
+                    <br>
+                    <div id="confirm_input">
+                        <div class="custom-control custom-checkbox custom-checkbox-green">
+                            <input type="checkbox" class="custom-control-input custom-control-input-black"
+                                id="customCheck6">
+                            <label class="custom-control-label" for="customCheck6"></label>
+                        </div>
+                        <p>Je confirme que toutes les informations saisies sont exactes et j'accepte <a href="#">vos
+                                conditions d'utilisation</a>.</p>
                     </div>
-                    <div class="triangle" style="display: none"></div>
-                </div>
-                <div class="form-group clicked_elem" style="display: none">
-                    <img src="./image-page-2/googlePay_card.png" style="height: 40px; margin-left:10px;"
-                        alt="">
-                    <div class="custom-control custom-checkbox custom-checkbox-green">
-                        <input type="checkbox" class="custom-control-input custom-control-input-green"
-                            id="customCheck4">
-                        <label class="custom-control-label" for="customCheck4"></label>
-                    </div>
-                    <div class="triangle" style="display: none"></div>
-                </div>
-                <div class="form-group clicked_elem" style="display: none">
-                    <img src="./image-page-2/amazon_card.png" style="height: 40px; margin-left:10px;"
-                        alt="">
-                    <div class="custom-control custom-checkbox custom-checkbox-green">
-                        <input type="checkbox" class="custom-control-input custom-control-input-green"
-                            id="customCheck5">
-                        <label class="custom-control-label" for="customCheck5"></label>
-                    </div>
-                    <div class="triangle" style="display: none"></div>
-                </div>
+                    <br>
+                </form>
 
-                <div id="button_plus">
-                    <h3>Plus ...</h3>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog paiement_Box" id="paiement_Box_card" style="max-width: 45%; display: none">
+        <div class="modal-content" style="width: 100%">
+            <div class="modal-header modal_head2">
+                <button type="button" id="close_modal2" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <h4 id="title_paypal"> Paiement par Carte de crédit</h4>
+                <p>Frais de transaction <span>0.00 </span> <span class="logo_money">€</span></p>
+                <br>
+                <img src="./image-page-2/stripe_card.png" class="img-fluid" style="height: 100px;" alt="">
+                <br>
+                <br>
+                <div type="button" class="paiement_method" onclick="payment()">
+                    <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> par
+                        carte</h4>
                 </div>
                 <br>
-                <div id="confirm_input">
-                    <div class="custom-control custom-checkbox custom-checkbox-green">
-                        <input type="checkbox" class="custom-control-input custom-control-input-black"
-                            id="customCheck6">
-                        <label class="custom-control-label" for="customCheck6"></label>
-                    </div>
-                    <p>Je confirme que toutes les informations saisies sont exactes et j'accepte <a
-                            href="#">vos
-                            conditions d'utilisation</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog paiement_Box" id="paiement_Box_paypal" style="max-width: 45%; display: none">
+        <div class="modal-content" style="width: 100%">
+            <div class="modal-header modal_head2">
+                <button type="button" id="close_modal2" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 id="title_paypal"> Paiement par PayPal</h4>
+                <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
+                <br>
+                <img src="./image-page-2/payPal_card.png" class="img-fluid" style="height: 100px;" alt="">
+                <br>
+                <br>
+                <div type="button" class="paiement_method" onclick="payment()">
+                    <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
+                        PayPal</h4>
                 </div>
                 <br>
-            </form>
-
-        </div>
-    </div>
-</div>
-<div class="modal-dialog paiement_Box" id="paiement_Box_card" style="max-width: 45%; display: none">
-    <div class="modal-content" style="width: 100%">
-        <div class="modal-body">
-            <h4 id="title_paypal"> Paiement par Carte de crédit</h4>
-            <p>Frais de transaction <span>0.00 </span> <span class="logo_money">€</span></p>
-            <br>
-            <img src="./image-page-2/stripe_card.png" class="img-fluid" style="height: 100px;" alt="">
-            <br>
-            <br>
-            <div type = "button"class="paiement_method" onclick="payment()">
-                <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> par
-                    carte</h4>
             </div>
-            <br>
         </div>
     </div>
-</div>
-<div class="modal-dialog paiement_Box" id="paiement_Box_paypal" style="max-width: 45%; display: none">
-    <div class="modal-content" style="width: 100%">
-        <div class="modal-body">
-            <h4 id="title_paypal"> Paiement par PayPal</h4>
-            <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
-            <br>
-            <img src="./image-page-2/payPal_card.png" class="img-fluid" style="height: 100px;" alt="">
-            <br>
-            <br>
-            <div type = "button" class="paiement_method" onclick="payment()">
-                <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
-                    PayPal</h4>
+    <div class="modal-dialog paiement_Box" id="paiement_Box_crypto" style="max-width: 45%; display: none">
+        <div class="modal-content" style="width: 100%">
+            <div class="modal-header modal_head2">
+                <button type="button" id="close_modal2" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <br>
-        </div>
-    </div>
-</div>
-<div class="modal-dialog paiement_Box" id="paiement_Box_crypto" style="max-width: 45%; display: none">
-    <div class="modal-content" style="width: 100%">
-        <div class="modal-body">
-            <h4 id="title_paypal"> Paiement par Crypto-monnaies</h4>
-            <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
-            <br>
-            <img src="./image-page-2/crypto_card.png" class="img-fluid" style="height: 100px;" alt="">
-            <br>
-            <br>
-            <div type = "button" class="paiement_method" onclick="payment()">
-                <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
-                    Crypto</h4>
+            <div class="modal-body">
+                <h4 id="title_paypal"> Paiement par Crypto-monnaies</h4>
+                <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
+                <br>
+                <img src="./image-page-2/crypto_card.png" class="img-fluid" style="height: 100px;" alt="">
+                <br>
+                <br>
+                <div type="button" class="paiement_method" onclick="payment()">
+                    <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
+                        Crypto</h4>
+                </div>
+                <br>
             </div>
-            <br>
         </div>
     </div>
-</div>
-<div class="modal-dialog paiement_Box" id="paiement_Box_googlepay" style="max-width: 45%; display: none">
-    <div class="modal-content" style="width: 100%">
-        <div class="modal-body">
-            <h4 id="title_paypal"> Paiement par GooglePay</h4>
-            <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
-            <img src="./image-page-2/googlePay_card.png" class="img-fluid" style="height: 150px;" alt="">
-            <br>
-            <div type = "button" class="paiement_method" onclick="payment()">
-                <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
-                    GooglePay</h4>
+    <div class="modal-dialog paiement_Box" id="paiement_Box_googlepay" style="max-width: 45%; display: none">
+        <div class="modal-content" style="width: 100%">
+            <div class="modal-header modal_head2">
+                <button type="button" id="close_modal2" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <br>
-        </div>
-    </div>
-</div>
-<div class="modal-dialog paiement_Box" id="paiement_Box_amazonpay" style="max-width: 45%; display: none">
-    <div class="modal-content" style="width: 100%">
-        <div class="modal-body">
-            <h4 id="title_paypal"> Paiement par AmazonPay</h4>
-            <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
-            <br>
-            <img src="./image-page-2/amazon_card.png" class="img-fluid" style="height: 100px;" alt="">
-            <br>
-            <br>
-            <div type = "button" class="paiement_method" onclick="payment()">
-                <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
-                    AmazonPay</h4>
+            <div class="modal-body">
+                <h4 id="title_paypal"> Paiement par GooglePay</h4>
+                <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
+                <img src="./image-page-2/googlePay_card.png" class="img-fluid" style="height: 150px;" alt="">
+                <br>
+                <div type="button" class="paiement_method" onclick="payment()">
+                    <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
+                        GooglePay</h4>
+                </div>
+                <br>
             </div>
-            <br>
         </div>
     </div>
-</div>
+    <div class="modal-dialog paiement_Box" id="paiement_Box_amazonpay" style="max-width: 45%; display: none">
+        <div class="modal-content" style="width: 100%">
+            <div class="modal-header modal_head2">
+                <button type="button" id="close_modal2" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 id="title_paypal"> Paiement par AmazonPay</h4>
+                <p>Frais de transaction <span>1.09 </span> <span class="logo_money">€</span></p>
+                <br>
+                <img src="./image-page-2/amazon_card.png" class="img-fluid" style="height: 100px;" alt="">
+                <br>
+                <br>
+                <div type="button" class="paiement_method" onclick="payment()">
+                    <h4>Payez <span class="price_money">4.99 </span> <span class="logo_money">€ </span> Par
+                        AmazonPay</h4>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
+
     function notallowed(table) {
         for (let i = 0; i < table.length; i++) {
-                table[i].style.cursor = "not-allowed";
-            }
+            table[i].style.cursor = "not-allowed";
+        }
     }
 
     function allowed(table) {
         for (let i = 0; i < table.length; i++) {
-                table[i].style.cursor = "pointer";
-            }
+            table[i].style.cursor = "pointer";
+        }
     }
 
     let customCheck6 = document.getElementById('customCheck6');
     let paiement_method = document.getElementsByClassName('paiement_method');
     notallowed(paiement_method);
-    
+
     function payment() {
-       if(customCheck6.checked) {
-           alert('oppps');
-       }
+        if (customCheck6.checked) {
+            alert('navigation vers le service de paiement !');
+        }
     }
 
     customCheck6.addEventListener('change', () => {
         if (customCheck6.checked) {
             allowed(paiement_method);
-           
+
         } else {
             notallowed(paiement_method);
         }
@@ -263,7 +287,7 @@ aria-hidden="true">
             }
         });
     };
-    
+
 
     let buy_premium1 = document.getElementById('buy_premium1');
     let buy_premium2 = document.getElementById('buy_premium2');
@@ -294,15 +318,39 @@ aria-hidden="true">
         }
     });
 
-    let close_modal = document.getElementById("close_modal");
-    close_modal.addEventListener("click", function () {
+    let close_modal1 = document.getElementById("close_modal1");
+    let close_modal2 = document.getElementsByClassName("modal-header modal_head2");
+    
+    if (window.innerWidth > "700") { 
+        for(let i = 0; i < close_modal2.length; i++) {
+            close_modal2[i].style.display = "none";
+        }
+    }
+    
+    function closeModals() {
         for (let i = 0; i < paiement_Box.length; i++) {
             paiement_Box[i].style.transform = "translate(0, 0)";
         }
         modalPaiement.style.transform = "translate(0, 0)";
-        for (let i = 0; i < check_boxs.length; i++) { 
+        for (let i = 0; i < check_boxs.length; i++) {
             check_boxs[i].checked = false;
             customCheck6.checked = false;
         }
+    }
+    
+        close_modal1.addEventListener("click", function () {
+        closeModals();
     });
+ 
+    for(let i = 0; i < close_modal2.length; i++) { 
+        close_modal2[i].addEventListener("click", function () {
+        if (window.innerWidth <= "700") { 
+            for(let i = 0; i < paiement_Box.length; i++) {
+                paiement_Box[i].style.display = "none";
+            }
+        }
+        
+    });
+    }
+    
 </script>
