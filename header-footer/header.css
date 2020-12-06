@@ -115,12 +115,12 @@ header .header-logo:hover {
     transition: 0.25s linear;
 }
 
-header .header-logo i {
+header .header-logo em {
     color: #828182;
     font-size: 1.2em;
 }
 
-header .header-logo:hover i {
+header .header-logo:hover em {
     color: white;
     animation: bounce 0.2s ease-in-out;
 }

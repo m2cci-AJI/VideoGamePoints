@@ -19,33 +19,6 @@
 </head>
 <body>
     <header id = "header"> </header>
-    <script id="rendered-js" >
-        function createRipple(event) {
-          const button = event.currentTarget;
-        
-          const circle = document.createElement("span");
-          const diameter = Math.max(button.clientWidth, button.clientHeight);
-          const radius = diameter / 2;
-        
-          circle.style.width = circle.style.height = `${diameter}px`;
-          circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-          circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-          circle.classList.add("ripple");
-        
-          const ripple = button.getElementsByClassName("ripple")[0];
-        
-          if (ripple) {
-            ripple.remove();
-          }
-        
-          button.appendChild(circle);
-        }
-        
-        const buttons = document.getElementsByTagName("button");
-        for (const button of buttons) {
-          button.addEventListener("click", createRipple);
-        }
-    </script>
 
     <h1 class="text-white text-center mt-5"> BIENVENUE: ???</h1>
 
@@ -165,5 +138,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type = "text/javascript" src = "./compte.js"></script>
 </body>
 </html>

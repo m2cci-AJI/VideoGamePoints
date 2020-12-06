@@ -183,7 +183,7 @@ em[class = "far fa-question-circle"] {
     border-radius: 10px;
 }
 
-section[class ="sec1 text-white mt-5"] a{
+section[class ="sec1 text-white mt-5"] div[class = "offres mt-5 text-center"] a{
     text-decoration: none !important;
     color: inherit;
 }

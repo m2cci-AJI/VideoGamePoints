@@ -23,35 +23,6 @@
 
 <body>
     <header id = "header"> </header>
-    <script id="rendered-js">
-        function createRipple(event) {
-            const button = event.currentTarget;
-
-            const circle = document.createElement("span");
-            const diameter = Math.max(button.clientWidth, button.clientHeight);
-            const radius = diameter / 2;
-
-            circle.style.width = circle.style.height = `${diameter}px`;
-            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-            circle.classList.add("ripple");
-
-            const ripple = button.getElementsByClassName("ripple")[0];
-
-            if (ripple) {
-                ripple.remove();
-            }
-
-            button.appendChild(circle);
-        }
-
-        const buttons = document.getElementsByTagName("button");
-        for (const button of buttons) {
-            button.addEventListener("click", createRipple);
-        }
-    </script>
-
-
 
     <section class="sec1">
         <div class="jumbotron jumbotron-fluid">
@@ -85,22 +56,6 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        document.addEventListener("mousemove", parallax);
-        function parallax(e) {
-            this.querySelectorAll('.layer').forEach(layer => {
-                const speed = layer.getAttribute('data-speed')
-
-                const x = (window.innerWidth - e.pageX * speed) / 100
-                const y = (window.innerHeight - e.pageY * speed) / 100
-
-                layer.style.transform = `translateX(${x}px) translateY(${y}px`
-            })
-        }
-    </script>
-
-
-
     <section class="sec2">
         <div class="jumbotron jumbotron-fluid height90p">
             <div class="container h-100 d-flex justify-content-around align-items-end flex-wrap">
@@ -109,16 +64,16 @@
                         data-interval="4000" data-pause="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img" src="image-page-1/perso-1.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/perso-1.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/perso-2.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/perso-2.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/perso-3.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/perso-3.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/perso-4.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/perso-4.png" class="d-block w-100" alt = "">
                             </div>
                         </div>
                     </div>
@@ -128,16 +83,16 @@
                         data-interval="4000" data-pause="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img" src="image-page-1/arme-1.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/arme-1.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/arme-2.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/arme-2.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/arme-3.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/arme-3.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/arme-4.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/arme-4.png" class="d-block w-100" alt = "">
                             </div>
                         </div>
                     </div>
@@ -147,10 +102,10 @@
                         data-interval="4000" data-pause="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img" src="image-page-1/page-1.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/page-1.png" class="d-block w-100" alt = "">
                             </div>
                             <div class="carousel-item">
-                                <img class="img" src="image-page-1/page-2.png" class="d-block w-100">
+                                <img class="img" src="image-page-1/page-2.png" class="d-block w-100" alt = "">
                             </div>
                         </div>
                     </div>
@@ -158,9 +113,6 @@
             </div>
         </div>
     </section>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 
     <section class="sec3 my-5">
         <h1 class="text-center text-white">Comment gagner des skins gratuitement ?</h1>
@@ -176,7 +128,7 @@
                     <!-- card -->
                     <div class="card">
 
-                        <div class="icon"><i class="material-icons md-36">login</i></div>
+                        <div class="icon"><em class="material-icons md-36">login</em></div>
                         <p class="title">Profile</p>
                         <p class="text">
                             <a href="#" class="text-white" data-toggle="modal"
@@ -193,7 +145,7 @@
                     <div class="card">
 
                         <a href="../2eme page grande/boutique.html" style="text-decoration: None">
-                            <div class="icon"><i class="material-icons md-36">control_point_duplicate</i></div>
+                            <div class="icon"><em class="material-icons md-36">control_point_duplicate</em></div>
                             <p class="title">Avoir des NP</p>
                             <p class="text">Vous devez avoir des NP pour acheter les produits</p>
                         </a>
@@ -203,16 +155,13 @@
                     <!-- card -->
                     <div class="card">
                         <a href="../4eme page grande/page4.html" style="text-decoration: None">
-                            <div class="icon"><i class="material-icons md-36">add_shopping_cart</i></div>
+                            <div class="icon"><em class="material-icons md-36">add_shopping_cart</em></div>
                             <p class="title">Shopping</p>
                             <p class="text">Vous pouvez acheter les produits si vous avez asser de NP</p>
                         </a>
 
                     </div>
                     <!-- end card -->
-
-
-
                 </div>
             </div>
         </div>
@@ -266,19 +215,19 @@
             <br><br>
             <div id="elements">
                 <div class="first_element">
-                    <i class="fas fa-coins fa-3x"></i>
+                    <em class="fas fa-coins fa-3x"></em>
                     <br><br>
                     <h6 style="text-align:center"> Les marques paient Niksoud pour gagner des visiteurs donc des potenciels acheteurs.</h6>
                 </div>
                 <div id = "arrow1" style="width: 100px; height: 100px;"></div>
                 <div class="second_element">
-                    <i class="fas fa-users fa-3x"></i>
+                    <em class="fas fa-users fa-3x"></em>
                     <br><br>
                     <h6 style="text-align:center"> Vous gagnez de l'argent en skin league of legends ou en playsafecard.</h6>
                 </div>
                 <div id = "arrow2" style="width: 100px; height: 100px;"></div>
                 <div class="third_element">
-                    <i class="fas fa-gamepad fa-3x"></i>
+                    <em class="fas fa-gamepad fa-3x"></em>
                     <br><br>
                     <h6 style="text-align:center"> Riot Games obtient de l'argent depensé dans les skins achetés.</h6>
                 </div>
@@ -288,14 +237,15 @@
     </section>
 
     <footer id = "footer" class="mt-5"> </footer>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    </script>
+    <script type="text/javascript" src = "./index.js"></script>
 </body>
 
 </html>

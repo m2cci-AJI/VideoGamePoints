@@ -25,33 +25,6 @@
 
 <body>
     <header id="header"> </header>
-    <script id="rendered-js">
-        function createRipple(event) {
-            const button = event.currentTarget;
-
-            const circle = document.createElement("span");
-            const diameter = Math.max(button.clientWidth, button.clientHeight);
-            const radius = diameter / 2;
-
-            circle.style.width = circle.style.height = `${diameter}px`;
-            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-            circle.classList.add("ripple");
-
-            const ripple = button.getElementsByClassName("ripple")[0];
-
-            if (ripple) {
-                ripple.remove();
-            }
-
-            button.appendChild(circle);
-        }
-
-        const buttons = document.getElementsByTagName("button");
-        for (const button of buttons) {
-            button.addEventListener("click", createRipple);
-        }
-    </script>
 
     <section class="sec1 text-white mt-5">
         <h1 class="text-center">C'est ici que vous gagnez vos NP</h1>
@@ -68,9 +41,6 @@
           <div id = "payment"></div>
         <!-- end Paiement Modal -->
         
-
-
-
         <div class="intro mx-auto my-5 pl-4">
             <h2>Regarder ces pubs pour avoir vos NP:</h2>
         </div>
@@ -125,29 +95,6 @@
         </div>
     </section>
 
-
-    <script>
-        $(document).ready(function () {
-            randomlyMoveImage();
-        });
-
-        function randomlyMoveImage() {
-            var width = $('.dot-doc').width();
-            var height = $('.dot-doc').height();
-
-            var x = Math.floor((Math.random() * width));
-            var y = Math.floor((Math.random() * height));
-            $(".dot").animate({
-                left: x,
-                top: y
-            }, 0, function () {
-                // Animation complete.
-            });
-
-            setTimeout(randomlyMoveImage, 1500);
-        }
-    </script>
-
     <div class="intro mx-auto my-5 pl-4">
         <h2 class="givewayh2">Vous pouvez aussi participer à un giveaway ! </h2>
     </div>
@@ -155,20 +102,6 @@
         <h3 class="givewayh3">Plus vous être nombreux à participer au giveaway, <span
                 style="text-decoration: underline;">plus il y en aura !</span></h3>
     </div>
-
-    <script>
-        window.console = window.console || function (t) { };
-    </script>
-
-
-
-    <script>
-        if (document.location.search.match(/type=embed/gi)) {
-            window.parent.postMessage("resize", "*");
-        }
-    </script>
-
-
 
     <div translate="no">
         <div class="container">
@@ -192,17 +125,6 @@
             </defs>
         </svg>
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-
-        <script id="rendered-js">
-            $(".button").click(function () {
-                $(".social.twitter").toggleClass("clicked");
-                $(".social.facebook").toggleClass("clicked");
-                $(".social.instagram").toggleClass("clicked");
-                $(".social.youtube").toggleClass("clicked");
-                $(".instruction").toggleClass("clicked");
-            });
-        </script>
         <a id="premium_object">
             <h2 style="text-align: center;color: white;">Choisissez votre forfait Premium</h2>
             <br>
@@ -285,19 +207,6 @@
                 </div>
             </div>
         </a>
-        <script>
-            let pricing_table_select = document.getElementsByTagName('select')[0];
-            let price = document.getElementsByClassName('pricing-value-offres')[0];
-            pricing_table_select.addEventListener('change', () => {
-                if (pricing_table_select.value === "20") {
-                    price.innerHTML = "€4.<span class='smallText'>99";
-                } else if (pricing_table_select.value === "40") {
-                    price.innerHTML = "€6.<span class='smallText'>99";
-                } else if (pricing_table_select.value === "60") {
-                    price.innerHTML = "€8.<span class='smallText'>99";
-                }
-            })
-        </script>
 
         <div class="intro mx-auto my-5 pl-4">
             <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné
@@ -315,6 +224,8 @@
             crossorigin="anonymous"></script>
         <link rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+            <script type = "text/javascript" src= "./boutique.js"></script>
             
 </body>
 

@@ -13,43 +13,16 @@
     <link rel="stylesheet" href="../header-footer/header.css">
     <link rel="stylesheet" href="../header-footer/footer.css">
     <link rel="stylesheet" href="pagelol.css">
-    <script> 
-        $(function(){
-          $("#header").load("../header-footer/header.html"); 
-          $("#footer").load("../header-footer/footer.html"); 
+    <script>
+        $(function () {
+            $("#header").load("../header-footer/header.html");
+            $("#footer").load("../header-footer/footer.html");
         });
     </script>
 </head>
 
 <body>
-    <header id = "header"> </header>
-    <script id="rendered-js">
-        function createRipple(event) {
-            const button = event.currentTarget;
-
-            const circle = document.createElement("span");
-            const diameter = Math.max(button.clientWidth, button.clientHeight);
-            const radius = diameter / 2;
-
-            circle.style.width = circle.style.height = `${diameter}px`;
-            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-            circle.classList.add("ripple");
-
-            const ripple = button.getElementsByClassName("ripple")[0];
-
-            if (ripple) {
-                ripple.remove();
-            }
-
-            button.appendChild(circle);
-        }
-
-        const buttons = document.getElementsByTagName("button");
-        for (const button of buttons) {
-            button.addEventListener("click", createRipple);
-        }
-    </script>
+    <header id="header"> </header>
 
     <section class="sec1 my-5 d-flex align-items-center" style="min-height: 500px;">
         <div class="container">
@@ -63,7 +36,7 @@
                             <div class="champion text-white m-2">
                                 <button class="champion-image" data-toggle="modal" data-target="#aatrox-modal1"
                                     style="width: 100%;">
-                                    <img src="logo_paysafecard_10eur.png" style="width: 100%; height: 100%;">
+                                    <img src="logo_paysafecard_10eur.png" style="width: 100%; height: 100%;" alt = "">
                                 </button>
                                 <div class="champion-title pl-4 py-2">
                                     <h2>10 euros</h2>
@@ -72,7 +45,7 @@
                             <div class="champion text-white m-2">
                                 <button class="champion-image" data-toggle="modal" data-target="#aatrox-modal2"
                                     style="width: 100%;">
-                                    <img src="logo_paysafecard_25eur.png" style="width: 100%; height: 100%;">
+                                    <img src="logo_paysafecard_25eur.png" style="width: 100%; height: 100%;" alt = "">
                                 </button>
                                 <div class="champion-title pl-4 py-2">
                                     <h2>25 euros</h2>
@@ -81,7 +54,7 @@
                             <div class="champion text-white m-2">
                                 <button class="champion-image" data-toggle="modal" data-target="#aatrox-modal3"
                                     style="width: 100%;">
-                                    <img src="logo_paysafecard_50eur.png" style="width: 100%; height: 100%;">
+                                    <img src="logo_paysafecard_50eur.png" style="width: 100%; height: 100%;" alt = "">
                                 </button>
                                 <div class="champion-title pl-4 py-2">
                                     <h2>50 euros</h2>
@@ -96,7 +69,7 @@
                                         data-interval="false">
                                         <button type="button" class="close text-white position-absolute p-2"
                                             data-dismiss="modal" aria-label="Close" style="z-index: 10;">
-                                            <i class="far fa-times-circle"></i>
+                                            <em class="far fa-times-circle"></em>
                                         </button>
                                         <!-- Carousel petite image -->
                                         <div class="carousel-nom text-white">
@@ -104,24 +77,24 @@
                                             <ol id="carousel_elems1" class="carousel-indicators">
                                                 <li id="carousel_elem1" data-target="#carousel-np1" data-slide-to="0"
                                                     class="active">
-                                                    <img src="image-page-4/modal-image/aatrox.jpg"
-                                                        class="d-block w-100">
+                                                    <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100"
+                                                        alt="">
                                                 </li>
                                                 <li id="carousel_elem2" data-target="#carousel-np1" data-slide-to="1">
                                                     <img src="image-page-4/modal-image/aatrox-2.jpg"
-                                                        class="d-block w-100">
+                                                        class="d-block w-100" alt="">
                                                 </li>
                                                 <li id="carousel_elem3" data-target="#carousel-np1" data-slide-to="2">
                                                     <img src="image-page-4/modal-image/aatrox-3.jpg"
-                                                        class="d-block w-100">
+                                                        class="d-block w-100" alt="">
                                                 </li>
                                                 <li id="carousel_elem4" data-target="#carousel-np1" data-slide-to="3">
                                                     <img src="image-page-4/modal-image/aatrox-4.jpg"
-                                                        class="d-block w-100">
+                                                        class="d-block w-100" alt="">
                                                 </li>
                                                 <li id="carousel_elem5" data-target="#carousel-np1" data-slide-to="4">
                                                     <img src="image-page-4/modal-image/aatrox-5.jpg"
-                                                        class="d-block w-100">
+                                                        class="d-block w-100" alt="">
                                                 </li>
                                                 <a class="carousel-control-prev" href="#carousel-np1" role="button"
                                                     data-slide="prev">
@@ -139,19 +112,24 @@
                                         <!-- Carousel grande image -->
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100">
+                                                <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100"
+                                                    alt="">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="image-page-4/modal-image/aatrox-2.jpg" class="d-block w-100">
+                                                <img src="image-page-4/modal-image/aatrox-2.jpg" class="d-block w-100"
+                                                    alt="">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="image-page-4/modal-image/aatrox-3.jpg" class="d-block w-100">
+                                                <img src="image-page-4/modal-image/aatrox-3.jpg" class="d-block w-100"
+                                                    alt="">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="image-page-4/modal-image/aatrox-4.jpg" class="d-block w-100">
+                                                <img src="image-page-4/modal-image/aatrox-4.jpg" class="d-block w-100"
+                                                    alt="">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="image-page-4/modal-image/aatrox-5.jpg" class="d-block w-100">
+                                                <img src="image-page-4/modal-image/aatrox-5.jpg" class="d-block w-100"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -177,23 +155,23 @@
                                                         <div class="carousel-item carousel_slide1 active"
                                                             data-slide-to="0">
                                                             <img src="image-page-4/modal-image/aatrox.jpg"
-                                                                class="d-block w-100">
+                                                                class="d-block w-100" alt="">
                                                         </div>
                                                         <div class="carousel-item carousel_slide1" data-slide-to="1">
                                                             <img src="image-page-4/modal-image/aatrox-2.jpg"
-                                                                class="d-block w-100">
+                                                                class="d-block w-100" alt="">
                                                         </div>
                                                         <div class="carousel-item carousel_slide1" data-slide-to="2">
                                                             <img src="image-page-4/modal-image/aatrox-3.jpg"
-                                                                class="d-block w-100">
+                                                                class="d-block w-100" alt="">
                                                         </div>
                                                         <div class="carousel-item carousel_slide1" data-slide-to="3">
                                                             <img src="image-page-4/modal-image/aatrox-4.jpg"
-                                                                class="d-block w-100">
+                                                                class="d-block w-100" alt="">
                                                         </div>
                                                         <div class="carousel-item carousel_slide1" data-slide-to="4">
                                                             <img src="image-page-4/modal-image/aatrox-5.jpg"
-                                                                class="d-block w-100">
+                                                                class="d-block w-100" alt="">
                                                         </div>
 
                                                     </div>
@@ -213,289 +191,264 @@
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                let carousel1 = document.getElementById('carousel_elems1').getElementsByTagName('li');
-                                let button_devr1 = document.getElementById('button_devr1');
-                                let carousel_slide1;
 
-                                button_devr1.addEventListener('click', function () {
-        
-                                    for (let i = 0; i < carousel1.length; i++) {
-                                        console.log('opps');
-                                        if (carousel1[i].getAttribute("class") === "active") {
-                                            carousel_slide1 = document.getElementsByClassName('carousel_slide1')[i];
-                                            document.getElementsByClassName('carousel_slide1')[i].classList.add("active");
-                                            $("#unlock-modal1").on('hide.bs.modal', function () {
-                                                document.getElementsByClassName('carousel_slide1')[i].classList.remove('active');
-                                            });
-                                        }
-                                    }
+                            <!-- Modal Aatrox 2 -->
+                            <div class="modal fade" id="aatrox-modal2" tabindex="-1" aria-labelledby="aatrox-modalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" style="pointer-events: auto;">
+                                    <!-- Carousel dans le modal -->
+                                    <div id="carousel-np2" class="carousel slide container carousel-fade"
+                                        data-interval="false">
+                                        <button type="button" class="close text-white position-absolute p-2"
+                                            data-dismiss="modal" aria-label="Close" style="z-index: 10;">
+                                            <em class="far fa-times-circle"></em>
+                                        </button>
+                                        <!-- Carousel petite image -->
+                                        <div class="carousel-nom text-white">
+                                            <h1>Aatrox</h1>
+                                            <ol id="carousel_elems2" class="carousel-indicators">
+                                                <li id="carousel_elem1" data-target="#carousel-np2" data-slide-to="0"
+                                                    class="active">
+                                                    <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100"
+                                                        alt="">
+                                                </li>
+                                                <li id="carousel_elem2" data-target="#carousel-np2" data-slide-to="1">
+                                                    <img src="image-page-4/modal-image/aatrox-2.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <li id="carousel_elem3" data-target="#carousel-np2" data-slide-to="2">
+                                                    <img src="image-page-4/modal-image/aatrox-3.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <li id="carousel_elem4" data-target="#carousel-np2" data-slide-to="3">
+                                                    <img src="image-page-4/modal-image/aatrox-4.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <li id="carousel_elem5" data-target="#carousel-np2" data-slide-to="4">
+                                                    <img src="image-page-4/modal-image/aatrox-5.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <a class="carousel-control-prev" href="#carousel-np2" role="button"
+                                                    data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carousel-np2" role="button"
+                                                    data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </ol>
+                                        </div>
 
-                                });
-                            </script>
-                                     <!-- Modal Aatrox 2 -->
-                                     <div class="modal fade" id="aatrox-modal2" tabindex="-1" aria-labelledby="aatrox-modalLabel"
-                                     aria-hidden="true">
-                                     <div class="modal-dialog modal-dialog-centered modal-xl" style="pointer-events: auto;">
-                                         <!-- Carousel dans le modal -->
-                                         <div id="carousel-np2" class="carousel slide container carousel-fade"
-                                             data-interval="false">
-                                             <button type="button" class="close text-white position-absolute p-2"
-                                                 data-dismiss="modal" aria-label="Close" style="z-index: 10;">
-                                                 <i class="far fa-times-circle"></i>
-                                             </button>
-                                             <!-- Carousel petite image -->
-                                             <div class="carousel-nom text-white">
-                                                 <h1>Aatrox</h1>
-                                                 <ol id="carousel_elems2" class="carousel-indicators">
-                                                     <li id="carousel_elem1" data-target="#carousel-np2" data-slide-to="0"
-                                                         class="active">
-                                                         <img src="image-page-4/modal-image/aatrox.jpg"
-                                                             class="d-block w-100">
-                                                     </li>
-                                                     <li id="carousel_elem2" data-target="#carousel-np2" data-slide-to="1">
-                                                         <img src="image-page-4/modal-image/aatrox-2.jpg"
-                                                             class="d-block w-100">
-                                                     </li>
-                                                     <li id="carousel_elem3" data-target="#carousel-np2" data-slide-to="2">
-                                                         <img src="image-page-4/modal-image/aatrox-3.jpg"
-                                                             class="d-block w-100">
-                                                     </li>
-                                                     <li id="carousel_elem4" data-target="#carousel-np2" data-slide-to="3">
-                                                         <img src="image-page-4/modal-image/aatrox-4.jpg"
-                                                             class="d-block w-100">
-                                                     </li>
-                                                     <li id="carousel_elem5" data-target="#carousel-np2" data-slide-to="4">
-                                                         <img src="image-page-4/modal-image/aatrox-5.jpg"
-                                                             class="d-block w-100">
-                                                     </li>
-                                                     <a class="carousel-control-prev" href="#carousel-np2" role="button"
-                                                         data-slide="prev">
-                                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                         <span class="sr-only">Previous</span>
-                                                     </a>
-                                                     <a class="carousel-control-next" href="#carousel-np2" role="button"
-                                                         data-slide="next">
-                                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                         <span class="sr-only">Next</span>
-                                                     </a>
-                                                 </ol>
-                                             </div>
-     
-                                             <!-- Carousel grande image -->
-                                             <div class="carousel-inner">
-                                                 <div class="carousel-item active">
-                                                     <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100">
-                                                 </div>
-                                                 <div class="carousel-item">
-                                                     <img src="image-page-4/modal-image/aatrox-2.jpg" class="d-block w-100">
-                                                 </div>
-                                                 <div class="carousel-item">
-                                                     <img src="image-page-4/modal-image/aatrox-3.jpg" class="d-block w-100">
-                                                 </div>
-                                                 <div class="carousel-item">
-                                                     <img src="image-page-4/modal-image/aatrox-4.jpg" class="d-block w-100">
-                                                 </div>
-                                                 <div class="carousel-item">
-                                                     <img src="image-page-4/modal-image/aatrox-5.jpg" class="d-block w-100">
-                                                 </div>
-                                             </div>
-                                         </div>
-     
-                                         <!-- Button trigger modal -->
-                                         <div id="unlock" class="container mt-5">
-                                             <div class="d-flex justify-content-center">
-                                                 <button id="button_devr2" type="button" class="btn px-4" data-toggle="modal"
-                                                     data-target="#unlock-modal2"
-                                                     style="background: #232328 !important;">DÉVERROUILLER</button>
-                                             </div>
-                                         </div>
-     
-                                         <!-- Modal dans le Modal -->
-                                         <div id="unlock-modal2" class="modal fade" tabindex="-1"
-                                             aria-labelledby="unlock-modal2" aria-hidden="true">
-                                             <div class="modal-dialog modal-dialog-centered">
-                                                 <div class="modal-content mx-4">
-                                                     <div id="carouselExampleSlidesOnly" class="carousel slide"
-                                                         data-interval="false">
-                                                         <div class="carousel-inner">
-     
-                                                             <div class="carousel-item carousel_slide2 active"
-                                                                 data-slide-to="0">
-                                                                 <img src="image-page-4/modal-image/aatrox.jpg"
-                                                                     class="d-block w-100">
-                                                             </div>
-                                                             <div class="carousel-item carousel_slide2" data-slide-to="1">
-                                                                 <img src="image-page-4/modal-image/aatrox-2.jpg"
-                                                                     class="d-block w-100">
-                                                             </div>
-                                                             <div class="carousel-item carousel_slide2" data-slide-to="2">
-                                                                 <img src="image-page-4/modal-image/aatrox-3.jpg"
-                                                                     class="d-block w-100">
-                                                             </div>
-                                                             <div class="carousel-item carousel_slide2" data-slide-to="3">
-                                                                 <img src="image-page-4/modal-image/aatrox-4.jpg"
-                                                                     class="d-block w-100">
-                                                             </div>
-                                                             <div class="carousel-item carousel_slide2" data-slide-to="4">
-                                                                 <img src="image-page-4/modal-image/aatrox-5.jpg"
-                                                                     class="d-block w-100">
-                                                             </div>
-     
-                                                         </div>
-                                                     </div>
-                                                     <div class="modal-body text-center pt-0 text-white">
-                                                         <h1>Aatrox</h1>
-                                                         <p>Épée des Darkin</p>
-                                                         <div class="divider mx-auto"></div>
-                                                         <div class="d-flex justify-content-center my-4">
-                                                             <button type="submit" class="btn w-50 text-white"></i>500<img
-                                                                     class="pl-2" src="../header-footer-logo/np.png"
-                                                                     alt="np logo" height="30"></button>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <script>
-                                    let carousel2 = document.getElementById('carousel_elems2').getElementsByTagName('li');
-                                    let button_devr2 = document.getElementById('button_devr2');
-                                    let carousel_slide2;
-    
-                                    button_devr2.addEventListener('click', function () {
-                                        for (let i = 0; i < carousel2.length; i++) {
-                                            if (carousel2[i].getAttribute("class") === "active") {
-                                                carousel_slide2 = document.getElementsByClassName('carousel_slide2')[i];
-                                                document.getElementsByClassName('carousel_slide2')[i].classList.add("active");
-                                                $("#unlock-modal2").on('hide.bs.modal', function () {
-                                                    document.getElementsByClassName('carousel_slide2')[i].classList.remove('active');
-                                                });
-                                            }
-                                        }
-    
-                                    });
-                                </script>
-                                          <!-- Modal Aatrox 3 -->
-                            <div class="modal fade" id="aatrox-modal3" tabindex="-1" aria-labelledby="aatrox-modalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-xl" style="pointer-events: auto;">
-                                <!-- Carousel dans le modal -->
-                                <div id="carousel-np3" class="carousel slide container carousel-fade"
-                                    data-interval="false">
-                                    <button type="button" class="close text-white position-absolute p-2"
-                                        data-dismiss="modal" aria-label="Close" style="z-index: 10;">
-                                        <i class="far fa-times-circle"></i>
-                                    </button>
-                                    <!-- Carousel petite image -->
-                                    <div class="carousel-nom text-white">
-                                        <h1>Aatrox</h1>
-                                        <ol id="carousel_elems3" class="carousel-indicators">
-                                            <li id="carousel_elem1" data-target="#carousel-np3" data-slide-to="0"
-                                                class="active">
-                                                <img src="image-page-4/modal-image/aatrox.jpg"
-                                                    class="d-block w-100">
-                                            </li>
-                                            <li id="carousel_elem2" data-target="#carousel-np3" data-slide-to="1">
-                                                <img src="image-page-4/modal-image/aatrox-2.jpg"
-                                                    class="d-block w-100">
-                                            </li>
-                                            <li id="carousel_elem3" data-target="#carousel-np3" data-slide-to="2">
-                                                <img src="image-page-4/modal-image/aatrox-3.jpg"
-                                                    class="d-block w-100">
-                                            </li>
-                                            <li id="carousel_elem4" data-target="#carousel-np3" data-slide-to="3">
-                                                <img src="image-page-4/modal-image/aatrox-4.jpg"
-                                                    class="d-block w-100">
-                                            </li>
-                                            <li id="carousel_elem5" data-target="#carousel-np3" data-slide-to="4">
-                                                <img src="image-page-4/modal-image/aatrox-5.jpg"
-                                                    class="d-block w-100">
-                                            </li>
-                                            <a class="carousel-control-prev" href="#carousel-np3" role="button"
-                                                data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#carousel-np3" role="button"
-                                                data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </ol>
-                                    </div>
-
-                                    <!-- Carousel grande image -->
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image-page-4/modal-image/aatrox-2.jpg" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image-page-4/modal-image/aatrox-3.jpg" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image-page-4/modal-image/aatrox-4.jpg" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image-page-4/modal-image/aatrox-5.jpg" class="d-block w-100">
+                                        <!-- Carousel grande image -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-2.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-3.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-4.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-5.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Button trigger modal -->
-                                <div id="unlock" class="container mt-5">
-                                    <div class="d-flex justify-content-center">
-                                        <button id="button_devr3" type="button" class="btn px-4" data-toggle="modal"
-                                            data-target="#unlock-modal3"
-                                            style="background: #232328 !important;">DÉVERROUILLER</button>
+                                    <!-- Button trigger modal -->
+                                    <div id="unlock" class="container mt-5">
+                                        <div class="d-flex justify-content-center">
+                                            <button id="button_devr2" type="button" class="btn px-4" data-toggle="modal"
+                                                data-target="#unlock-modal2"
+                                                style="background: #232328 !important;">DÉVERROUILLER</button>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <!-- Modal dans le Modal -->
-                                <div id="unlock-modal3" class="modal fade" tabindex="-1"
-                                    aria-labelledby="unlock-modal3" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content mx-4">
-                                            <div id="carouselExampleSlidesOnly" class="carousel slide"
-                                                data-interval="false">
-                                                <div class="carousel-inner">
+                                    <!-- Modal dans le Modal -->
+                                    <div id="unlock-modal2" class="modal fade" tabindex="-1"
+                                        aria-labelledby="unlock-modal2" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content mx-4">
+                                                <div id="carouselExampleSlidesOnly" class="carousel slide"
+                                                    data-interval="false">
+                                                    <div class="carousel-inner">
 
-                                                    <div class="carousel-item carousel_slide3 active"
-                                                        data-slide-to="0">
-                                                        <img src="image-page-4/modal-image/aatrox.jpg"
-                                                            class="d-block w-100">
-                                                    </div>
-                                                    <div class="carousel-item carousel_slide3" data-slide-to="1">
-                                                        <img src="image-page-4/modal-image/aatrox-2.jpg"
-                                                            class="d-block w-100">
-                                                    </div>
-                                                    <div class="carousel-item carousel_slide3" data-slide-to="2">
-                                                        <img src="image-page-4/modal-image/aatrox-3.jpg"
-                                                            class="d-block w-100">
-                                                    </div>
-                                                    <div class="carousel-item carousel_slide3" data-slide-to="3">
-                                                        <img src="image-page-4/modal-image/aatrox-4.jpg"
-                                                            class="d-block w-100">
-                                                    </div>
-                                                    <div class="carousel-item carousel_slide3" data-slide-to="4">
-                                                        <img src="image-page-4/modal-image/aatrox-5.jpg"
-                                                            class="d-block w-100">
-                                                    </div>
+                                                        <div class="carousel-item carousel_slide2 active"
+                                                            data-slide-to="0">
+                                                            <img src="image-page-4/modal-image/aatrox.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide2" data-slide-to="1">
+                                                            <img src="image-page-4/modal-image/aatrox-2.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide2" data-slide-to="2">
+                                                            <img src="image-page-4/modal-image/aatrox-3.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide2" data-slide-to="3">
+                                                            <img src="image-page-4/modal-image/aatrox-4.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide2" data-slide-to="4">
+                                                            <img src="image-page-4/modal-image/aatrox-5.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
 
+                                                    </div>
+                                                </div>
+                                                <div class="modal-body text-center pt-0 text-white">
+                                                    <h1>Aatrox</h1>
+                                                    <p>Épée des Darkin</p>
+                                                    <div class="divider mx-auto"></div>
+                                                    <div class="d-flex justify-content-center my-4">
+                                                        <button type="submit" class="btn w-50 text-white"></i>500<img
+                                                                class="pl-2" src="../header-footer-logo/np.png"
+                                                                alt="np logo" height="30"></button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="modal-body text-center pt-0 text-white">
-                                                <h1>Aatrox</h1>
-                                                <p>Épée des Darkin</p>
-                                                <div class="divider mx-auto"></div>
-                                                <div class="d-flex justify-content-center my-4">
-                                                    <button type="submit" class="btn w-50 text-white"></i>500<img
-                                                            class="pl-2" src="../header-footer-logo/np.png"
-                                                            alt="np logo" height="30"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal Aatrox 3 -->
+                            <div class="modal fade" id="aatrox-modal3" tabindex="-1" aria-labelledby="aatrox-modalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" style="pointer-events: auto;">
+                                    <!-- Carousel dans le modal -->
+                                    <div id="carousel-np3" class="carousel slide container carousel-fade"
+                                        data-interval="false">
+                                        <button type="button" class="close text-white position-absolute p-2"
+                                            data-dismiss="modal" aria-label="Close" style="z-index: 10;">
+                                            <em class="far fa-times-circle"></em>
+                                        </button>
+                                        <!-- Carousel petite image -->
+                                        <div class="carousel-nom text-white">
+                                            <h1>Aatrox</h1>
+                                            <ol id="carousel_elems3" class="carousel-indicators">
+                                                <li id="carousel_elem1" data-target="#carousel-np3" data-slide-to="0"
+                                                    class="active">
+                                                    <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100"
+                                                        alt="">
+                                                </li>
+                                                <li id="carousel_elem2" data-target="#carousel-np3" data-slide-to="1">
+                                                    <img src="image-page-4/modal-image/aatrox-2.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <li id="carousel_elem3" data-target="#carousel-np3" data-slide-to="2">
+                                                    <img src="image-page-4/modal-image/aatrox-3.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <li id="carousel_elem4" data-target="#carousel-np3" data-slide-to="3">
+                                                    <img src="image-page-4/modal-image/aatrox-4.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <li id="carousel_elem5" data-target="#carousel-np3" data-slide-to="4">
+                                                    <img src="image-page-4/modal-image/aatrox-5.jpg"
+                                                        class="d-block w-100" alt="">
+                                                </li>
+                                                <a class="carousel-control-prev" href="#carousel-np3" role="button"
+                                                    data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carousel-np3" role="button"
+                                                    data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </ol>
+                                        </div>
+
+                                        <!-- Carousel grande image -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="image-page-4/modal-image/aatrox.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-2.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-3.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-4.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image-page-4/modal-image/aatrox-5.jpg" class="d-block w-100"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Button trigger modal -->
+                                    <div id="unlock" class="container mt-5">
+                                        <div class="d-flex justify-content-center">
+                                            <button id="button_devr3" type="button" class="btn px-4" data-toggle="modal"
+                                                data-target="#unlock-modal3"
+                                                style="background: #232328 !important;">DÉVERROUILLER</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal dans le Modal -->
+                                    <div id="unlock-modal3" class="modal fade" tabindex="-1"
+                                        aria-labelledby="unlock-modal3" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content mx-4">
+                                                <div id="carouselExampleSlidesOnly" class="carousel slide"
+                                                    data-interval="false">
+                                                    <div class="carousel-inner">
+
+                                                        <div class="carousel-item carousel_slide3 active"
+                                                            data-slide-to="0">
+                                                            <img src="image-page-4/modal-image/aatrox.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide3" data-slide-to="1">
+                                                            <img src="image-page-4/modal-image/aatrox-2.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide3" data-slide-to="2">
+                                                            <img src="image-page-4/modal-image/aatrox-3.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide3" data-slide-to="3">
+                                                            <img src="image-page-4/modal-image/aatrox-4.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+                                                        <div class="carousel-item carousel_slide3" data-slide-to="4">
+                                                            <img src="image-page-4/modal-image/aatrox-5.jpg"
+                                                                class="d-block w-100" alt="">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-body text-center pt-0 text-white">
+                                                    <h1>Aatrox</h1>
+                                                    <p>Épée des Darkin</p>
+                                                    <div class="divider mx-auto"></div>
+                                                    <div class="d-flex justify-content-center my-4">
+                                                        <button type="submit" class="btn w-50 text-white"></i>500<img
+                                                                class="pl-2" src="../header-footer-logo/np.png"
+                                                                alt="np logo" height="30"></button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -503,28 +456,9 @@
                                 </div>
                             </div>
                         </div>
-                            <script>
-                                let carousel3 = document.getElementById('carousel_elems3').getElementsByTagName('li');
-                                let button_devr3 = document.getElementById('button_devr3');
-                                let carousel_slide3;
-
-                                button_devr3.addEventListener('click', function () {
-                                    for (let i = 0; i < carousel3.length; i++) {
-                                        if (carousel3[i].getAttribute("class") === "active") {
-                                            carousel_slide3 = document.getElementsByClassName('carousel_slide3')[i];
-                                            document.getElementsByClassName('carousel_slide3')[i].classList.add("active");
-                                            $("#unlock-modal3").on('hide.bs.modal', function () {
-                                                document.getElementsByClassName('carousel_slide3')[i].classList.remove('active');
-                                            });
-                                        }
-                                    }
-
-                                });
-                            </script>
-                        </div>
     </section>
 
-    <footer id = "footer" class="mt-5"> </footer>
+    <footer id="footer" class="mt-5"> </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
@@ -532,6 +466,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script type = "text/javascript" src = "./pagelol.js"></script>
 </body>
 
 </html>
