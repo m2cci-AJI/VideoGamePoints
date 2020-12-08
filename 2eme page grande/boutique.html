@@ -20,6 +20,30 @@
             $("#footer").load("../header-footer/footer.html");
             $("#payment").load("../payment/payment.html");
         });
+        $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $(".scroll_button").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (2000) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 2000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
     </script>
 </head>
 
@@ -30,17 +54,17 @@
         <h1 class="text-center">C'est ici que vous gagnez vos NP</h1>
         <div class="offres mt-5 text-center">
             <button class="premium px-5 my-3 mx-3">
-                <a href="#premium_object">PREMIUM<br>2.99€ / Mois</a>
+                <a href="#premium_object" class = "scroll_button">PREMIUM<br>2.99€ / Mois</a>
             </button>
             <button class="buy-np px-5 my-3 mx-3">
-                <a href="#buy_object">ACHETER<br>DES NP</a>
+                <a href="#buy_object" class = "scroll_button">ACHETER<br>DES NP</a>
             </button>
         </div>
 
         <!-- Paiement Modal -->
-          <div id = "payment"></div>
+        <div id="payment"></div>
         <!-- end Paiement Modal -->
-        
+
         <div class="intro mx-auto my-5 pl-4">
             <h2>Regarder ces pubs pour avoir vos NP:</h2>
         </div>
@@ -125,7 +149,7 @@
             </defs>
         </svg>
 
-        <a id="premium_object">
+        <div id="premium_object">
             <h2 style="text-align: center;color: white;">Choisissez votre forfait Premium</h2>
             <br>
             <h5 style="text-align: center;color: white;">Avec notre engagement et notre garantie de remboursement,
@@ -167,7 +191,7 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
         <br>
         <br>
         <br>
@@ -176,7 +200,7 @@
         <br>
         <br>
         <br>
-        <a id="buy_object">
+        <div id="buy_object">
             <h2 style="text-align: center;color: white;">Achetez vos points NP</h2>
             <br>
             <h5 style="text-align: center;color: white;">Ici, vous Profitez de nos meilleurs prix !</h5>
@@ -191,7 +215,7 @@
                     </div>
                     <br>
                     <span class="keywords">Sélectionnez le nombre <strong>des points NP </strong> à
-                            acheter</span>
+                        acheter</span>
                     <br>
                     <br>
                     <div class="input-group mb-2" style="width: 80%; position: relative; left: 10%;">
@@ -206,7 +230,7 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
 
         <div class="intro mx-auto my-5 pl-4">
             <h2 class="givewayh2">Abonne-toi à chaqu'un des reseaux sociaux et le reste des instruction serons donné
@@ -224,9 +248,9 @@
             crossorigin="anonymous"></script>
         <link rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-            <script type = "text/javascript" src= "./boutique.js"></script>
-            
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script type="text/javascript" src="./boutique.js"></script>
+
 </body>
 
 </html>
