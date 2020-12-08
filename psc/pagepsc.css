@@ -256,20 +256,20 @@ h1{
     font-size: 1.3em;
 }
 
-#unlock-modal .modal-content {
+#unlock-modal1 .modal-content, #unlock-modal2 .modal-content, #unlock-modal3 .modal-content {
     border-radius: 5px;
     overflow: hidden;
     background-color: #030a15;
     border: 1px solid #c5a974;
 }
 
-#unlock-modal button.close {
+#unlock-modal1 button.close, #unlock-modal2 button.close , #unlock-modal3 button.close  {
     z-index: 99;
     right: 10px;
     top: 10px;
 }
 
-#unlock-modal .carousel-inner::before {
+#unlock-modal1 .carousel-inner::before, #unlock-modal2 .carousel-inner::before, #unlock-modal3 .carousel-inner::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -278,19 +278,19 @@ h1{
     z-index: 5;
 }
 
-#unlock-modal .color-bar {
+#unlock-modal1 .color-bar, #unlock-modal2 .color-bar, #unlock-modal3 .color-bar {
     width: 100%;
     height: 5px;
     background: linear-gradient(to right, #c5a974, #644f28);
 }
 
-#unlock-modal.modal .divider {
+#unlock-modal1.modal .divider, #unlock-modal2.modal .divider, #unlock-modal3.modal .divider {
     width: 100%;
     height: 1px;
     background-color: #c5a974;
 }
 
-#unlock-modal .btn {
+#unlock-modal1 .btn, #unlock-modal2 .btn, #unlock-modal3 .btn {
     background: #232328 !important;
     border: 2px solid #c5a974;
 }
