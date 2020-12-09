@@ -23,8 +23,8 @@ function createRipple(event) {
   for (const button of buttons) {
     button.addEventListener("click", createRipple);
   }
-
-  $('#choix-1-list').on('click', function (e) {
+  
+$('#choix-1-list').on('click', function (e) {
     e.preventDefault()
     $('#choix-1-list').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
     $('#choix-1').addClass('show').addClass('active').siblings().removeClass('show').removeClass('active');
