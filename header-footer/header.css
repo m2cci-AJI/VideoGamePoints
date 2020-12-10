@@ -29,7 +29,7 @@ header nav {
     z-index: 99999;
 }
 
-header i.fas.fa-bars {
+header em.fas.fa-bars {
     color: white;
 }
 
