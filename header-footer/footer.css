@@ -1,6 +1,8 @@
 /*--FOOTER--*/
 footer {
     background-color: #000;
+    position: relative;
+    width: 100%;
 }
 
 footer .content {
